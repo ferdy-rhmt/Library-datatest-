@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{103F7ED2-3FED-432B-A2A2-4C72B12896FC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Library.My.MyApplication</StartupObject>
+    <RootNamespace>Library</RootNamespace>
+    <AssemblyName>Library</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Library.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>true</Prefer32Bit>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Library.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Taskbar_Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>D:\VS\Toolbox_Ext\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>D:\VS\Toolbox_Ext\[FTUApps.com] - Guna UI Framework Ultimate v2.0.0.1 + Keygen\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>D:\VS\Toolbox_Ext\[FTUApps.com] - Guna UI Framework Ultimate v2.0.0.1 + Keygen\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="custMsgBoxx.Designer.vb">
+      <DependentUpon>custMsgBoxx.vb</DependentUpon>
+    </Compile>
+    <Compile Include="custMsgBoxx.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="custMsgBoxx2.Designer.vb">
+      <DependentUpon>custMsgBoxx2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="custMsgBoxx2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data_Master.Designer.vb">
+      <DependentUpon>Data_Master.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Data_Master.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data_Master_Anggotafr_Add.Designer.vb">
+      <DependentUpon>Data_Master_Anggotafr_Add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Data_Master_Anggotafr_Add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data_Master_Anggotafr.Designer.vb">
+      <DependentUpon>Data_Master_Anggotafr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Data_Master_Anggotafr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data_Master_Adminfr.Designer.vb">
+      <DependentUpon>Data_Master_Adminfr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Data_Master_Adminfr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data_Master_Bukufr_Add.Designer.vb">
+      <DependentUpon>Data_Master_Bukufr_Add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Data_Master_Bukufr_Add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data_Master_Adminfr_Add.Designer.vb">
+      <DependentUpon>Data_Master_Adminfr_Add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Data_Master_Adminfr_Add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data_Master_Bukufr.Designer.vb">
+      <DependentUpon>Data_Master_Bukufr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Data_Master_Bukufr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lainnya.Designer.vb">
+      <DependentUpon>Lainnya.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Lainnya.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan_Peminjaman.Designer.vb">
+      <DependentUpon>Laporan_Peminjaman.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan_Peminjaman.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan.Designer.vb">
+      <DependentUpon>Laporan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Admin.Designer.vb">
+      <DependentUpon>Login_Admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Term.vb" />
+    <Compile Include="Transaksi.Designer.vb">
+      <DependentUpon>Transaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi_Pengembalian.Designer.vb">
+      <DependentUpon>Transaksi_Pengembalian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi_Pengembalian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi_Peminjaman.Designer.vb">
+      <DependentUpon>Transaksi_Peminjaman.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi_Peminjaman.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="custMsgBoxx.resx">
+      <DependentUpon>custMsgBoxx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="custMsgBoxx2.resx">
+      <DependentUpon>custMsgBoxx2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data_Master.resx">
+      <DependentUpon>Data_Master.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data_Master_Anggotafr_Add.resx">
+      <DependentUpon>Data_Master_Anggotafr_Add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data_Master_Anggotafr.resx">
+      <DependentUpon>Data_Master_Anggotafr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data_Master_Adminfr.resx">
+      <DependentUpon>Data_Master_Adminfr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data_Master_Bukufr_Add.resx">
+      <DependentUpon>Data_Master_Bukufr_Add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data_Master_Adminfr_Add.resx">
+      <DependentUpon>Data_Master_Adminfr_Add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data_Master_Bukufr.resx">
+      <DependentUpon>Data_Master_Bukufr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lainnya.resx">
+      <DependentUpon>Lainnya.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan_Peminjaman.resx">
+      <DependentUpon>Laporan_Peminjaman.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan.resx">
+      <DependentUpon>Laporan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Admin.resx">
+      <DependentUpon>Login_Admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi.resx">
+      <DependentUpon>Transaksi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi_Pengembalian.resx">
+      <DependentUpon>Transaksi_Pengembalian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi_Peminjaman.resx">
+      <DependentUpon>Transaksi_Peminjaman.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar50px.png" />
+    <None Include="Resources\menu11.png" />
+    <None Include="Resources\data master.png" />
+    <None Include="Resources\transaksi.png" />
+    <None Include="Resources\laporan.png" />
+    <None Include="Resources\lainnya.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\admin1.png" />
+    <None Include="Resources\adminwhite.png" />
+    <None Include="Resources\rak buku.png" />
+    <None Include="Resources\rak buku1.png" />
+    <None Include="Resources\kategori buku.png" />
+    <None Include="Resources\kategori buku1.png" />
+    <None Include="Resources\buku.png" />
+    <None Include="Resources\buku1.png" />
+    <None Include="Resources\anggota.png" />
+    <None Include="Resources\anggota1.png" />
+    <None Include="Resources\ubah kata sandi.png" />
+    <None Include="Resources\ubah kata sandi1.png" />
+    <None Include="Resources\lap peminjaman.png" />
+    <None Include="Resources\lap peminjaman1.png" />
+    <None Include="Resources\lap denda.png" />
+    <None Include="Resources\lap denda1.png" />
+    <None Include="Resources\lap data master.png" />
+    <None Include="Resources\lap data master1.png" />
+    <None Include="Resources\Logo Manent2.png" />
+    <None Include="Resources\id-card %281%29.png" />
+    <None Include="Resources\password %281%29.png" />
+    <None Include="Resources\cari buku.png" />
+    <None Include="Resources\cari buku1.png" />
+    <None Include="Resources\peminjaman.png" />
+    <None Include="Resources\peminjaman1.png" />
+    <None Include="Resources\pengembalian.png" />
+    <None Include="Resources\pengembalian1.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\info1.png" />
+    <None Include="Resources\question.png" />
+    <None Include="Resources\checked.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\add-friend.png" />
+    <None Include="Resources\add-friend %281%29.png" />
+    <None Include="Resources\delete-user.png" />
+    <None Include="Resources\delete-user %281%29.png" />
+    <None Include="Resources\eye.png" />
+    <None Include="Resources\add_rak.png" />
+    <None Include="Resources\add_rak1.png" />
+    <None Include="Resources\delete_rak.png" />
+    <None Include="Resources\delete_rak1.png" />
+    <Content Include="Taskbar_Icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
