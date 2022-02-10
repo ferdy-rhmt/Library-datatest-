@@ -37,6 +37,7 @@ Partial Class Data_Master_Bukufr
         Me.th_terbit = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.stok = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GunaGradientPanel1 = New Guna.UI.WinForms.GunaGradientPanel()
+        Me.btneditstok = New Guna.UI2.WinForms.Guna2TileButton()
         Me.lblid = New Guna.UI.WinForms.GunaLabel()
         Me.txtcaribuku = New Guna.UI2.WinForms.Guna2TextBox()
         Me.lblpengganti = New Guna.UI.WinForms.GunaLabel()
@@ -161,6 +162,7 @@ Partial Class Data_Master_Bukufr
         '
         Me.GunaGradientPanel1.BackgroundImage = CType(resources.GetObject("GunaGradientPanel1.BackgroundImage"), System.Drawing.Image)
         Me.GunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GunaGradientPanel1.Controls.Add(Me.btneditstok)
         Me.GunaGradientPanel1.Controls.Add(Me.lblid)
         Me.GunaGradientPanel1.Controls.Add(Me.txtcaribuku)
         Me.GunaGradientPanel1.Controls.Add(Me.lblpengganti)
@@ -178,6 +180,35 @@ Partial Class Data_Master_Bukufr
         Me.GunaGradientPanel1.Size = New System.Drawing.Size(680, 455)
         Me.GunaGradientPanel1.TabIndex = 7
         Me.GunaGradientPanel1.Text = "GunaGradientPanel1"
+        '
+        'btneditstok
+        '
+        Me.btneditstok.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btneditstok.Animated = True
+        Me.btneditstok.BackColor = System.Drawing.Color.Transparent
+        Me.btneditstok.BorderRadius = 6
+        Me.btneditstok.CheckedState.Parent = Me.btneditstok
+        Me.btneditstok.CustomImages.Parent = Me.btneditstok
+        Me.btneditstok.FillColor = System.Drawing.Color.Silver
+        Me.btneditstok.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btneditstok.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.btneditstok.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.btneditstok.HoverState.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btneditstok.HoverState.Image = Global.Library.My.Resources.Resources.add_rak1
+        Me.btneditstok.HoverState.Parent = Me.btneditstok
+        Me.btneditstok.Image = Global.Library.My.Resources.Resources.add_rak
+        Me.btneditstok.ImageOffset = New System.Drawing.Point(0, 10)
+        Me.btneditstok.ImageSize = New System.Drawing.Size(30, 30)
+        Me.btneditstok.Location = New System.Drawing.Point(12, 180)
+        Me.btneditstok.Name = "btneditstok"
+        Me.btneditstok.ShadowDecoration.Depth = 31
+        Me.btneditstok.ShadowDecoration.Enabled = True
+        Me.btneditstok.ShadowDecoration.Parent = Me.btneditstok
+        Me.btneditstok.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(5, 0, 0, 5)
+        Me.btneditstok.Size = New System.Drawing.Size(80, 80)
+        Me.btneditstok.TabIndex = 17
+        Me.btneditstok.Text = "Edit Stok"
+        Me.btneditstok.TextOffset = New System.Drawing.Point(0, 6)
         '
         'lblid
         '
@@ -257,7 +288,7 @@ Partial Class Data_Master_Bukufr
         Me.btnAddBuku.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(5, 0, 0, 5)
         Me.btnAddBuku.Size = New System.Drawing.Size(80, 80)
         Me.btnAddBuku.TabIndex = 9
-        Me.btnAddBuku.Text = "Add/Edit"
+        Me.btnAddBuku.Text = "Add"
         Me.btnAddBuku.TextOffset = New System.Drawing.Point(0, 6)
         '
         'btnDelBuku
@@ -278,7 +309,7 @@ Partial Class Data_Master_Bukufr
         Me.btnDelBuku.Image = Global.Library.My.Resources.Resources.delete_rak
         Me.btnDelBuku.ImageOffset = New System.Drawing.Point(0, 10)
         Me.btnDelBuku.ImageSize = New System.Drawing.Size(30, 30)
-        Me.btnDelBuku.Location = New System.Drawing.Point(12, 180)
+        Me.btnDelBuku.Location = New System.Drawing.Point(12, 266)
         Me.btnDelBuku.Name = "btnDelBuku"
         Me.btnDelBuku.ShadowDecoration.Depth = 31
         Me.btnDelBuku.ShadowDecoration.Enabled = True
@@ -350,4 +381,5 @@ Partial Class Data_Master_Bukufr
     Friend WithEvents stok As DataGridViewTextBoxColumn
     Friend WithEvents txtcaribuku As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents lblid As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents btneditstok As Guna.UI2.WinForms.Guna2TileButton
 End Class

@@ -4,11 +4,13 @@ Public Class Transaksi_Pengembalian
         txtIDBuku.Clear()
         txtnamabuku.Clear()
         txttglpinjam.Clear()
+        txtdipinjam.Clear()
         txtidpinjam.Clear()
         txtlamapinjam.Clear()
         txtterlambat.Clear()
         txtdenda.Clear()
         txttotaldenda.Clear()
+        dgvInputkembali.Rows.Clear()
         txtIDBuku.Focus()
         txttotaldenda.Text = "0"
         If txtidagt.Text = "" Then
@@ -62,6 +64,7 @@ Public Class Transaksi_Pengembalian
         Call bersih_anggota()
         Call nomoroto()
         Call pengaturan()
+        dgvInputkembali.Refresh()
         txtidagt.Clear()
         txtnamaagt.Clear()
         txtidagt.Focus()
@@ -114,6 +117,7 @@ Public Class Transaksi_Pengembalian
             If rd.HasRows = True Then
                 txtnamabuku.Text = rd("Judul")
                 txttglpinjam.Text = Format(DateValue(rd.Item("tanggal_pinjam")), "dd-MM-yyyy")
+                txtdipinjam.Text = rd("jumlah_pinjam")
                 txtidpinjam.Text = rd("id_pinjam")
                 'hitung lama pinjam
                 Dim tgl1 As Date
@@ -139,13 +143,13 @@ Public Class Transaksi_Pengembalian
         End If
     End Sub
 
-    Private Sub txtaddkembali_Click(sender As Object, e As EventArgs) Handles btnaddkembali.Click
+    Private Sub btnaddkembali_Click(sender As Object, e As EventArgs) Handles btnaddkembali.Click
         If txtidagt.Text = "" Or txtnamaagt.Text = "" Or txtkelassis.Text = "" Then
             MessageBox.Show("Data Anggota Belum diisi dengan benar !!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         ElseIf txtIDBuku.Text = "" Or txtnamabuku.Text = "" Or txtidpinjam.Text = "" Then
             MessageBox.Show("Data Buku Belum diisi dengan benar !!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
-            dgvInputkembali.Rows.Add(txtIDBuku.Text, txtnamabuku.Text, txttglpinjam.Text, txtidpinjam.Text, txtlamapinjam.Text, txtterlambat.Text, txtdenda.Text)
+            dgvInputkembali.Rows.Add(txtIDBuku.Text, txtnamabuku.Text, txttglpinjam.Text, txtdipinjam.Text, txtidpinjam.Text, txtlamapinjam.Text, txtterlambat.Text, txtdenda.Text)
             Call bersih_transaksi()
             btnkembalibuku.Enabled = True
             For barisatas As Integer = 0 To dgvInputkembali.RowCount - 1
@@ -169,7 +173,7 @@ Public Class Transaksi_Pengembalian
             ElseIf txtIDBuku.Text = "" Or txtnamabuku.Text = "" Or txtidpinjam.Text = "" Then
                 MessageBox.Show("Data Buku Belum diisi dengan benar !!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
-                dgvInputkembali.Rows.Add(txtIDBuku.Text, txtnamabuku.Text, txttglpinjam.Text, txtidpinjam.Text, txtlamapinjam.Text, txtterlambat.Text, txtdenda.Text)
+                dgvInputkembali.Rows.Add(txtIDBuku.Text, txtnamabuku.Text, txttglpinjam.Text, txtdipinjam.Text, txtidpinjam.Text, txtlamapinjam.Text, txtterlambat.Text, txtdenda.Text)
                 Call bersih_transaksi()
                 btnkembalibuku.Enabled = True
                 For barisatas As Integer = 0 To dgvInputkembali.RowCount - 1
@@ -185,5 +189,44 @@ Public Class Transaksi_Pengembalian
                 Call hitung_total_denda()
             End If
         End If
+    End Sub
+
+    Private Sub btnkembalibuku_Click(sender As Object, e As EventArgs) Handles btnkembalibuku.Click
+        If txtidagt.Text = "" Or txtnamaagt.Text = "" Or dgvInputkembali.RowCount - 1 = 0 Then
+            MessageBox.Show("Data Belum Lengkap !", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            cmd = New OleDbCommand("insert into tbl_kembali values ('" & txtidkembali.Text &
+                                                                "','" & txttanggal.Text &
+                                                                "','" & txtidagt.Text &
+                                                                "','" & txttotaldenda.Text &
+                                                                "') ", conn)
+            cmd.ExecuteNonQuery()
+
+            For baris As Integer = 0 To dgvInputkembali.RowCount - 2
+                'save ke tabel kembali detail
+                cmd = New OleDbCommand("insert into tbl_kembali_detail values('" & txtidkembali.Text &
+                                                                          "', '" & dgvInputkembali.Rows(baris).Cells(0).Value &
+                                                                          "', '" & dgvInputkembali.Rows(baris).Cells(5).Value &
+                                                                          "', '" & dgvInputkembali.Rows(baris).Cells(6).Value &
+                                                                          "', '" & dgvInputkembali.Rows(baris).Cells(7).Value &
+                                                                          "', '" & dgvInputkembali.Rows(baris).Cells(3).Value &
+                                                                          "')", conn)
+                cmd.ExecuteNonQuery()
+
+                'penambahan nilai stok
+                cmd = New OleDbCommand("select * from tbl_buku where id_buku = '" & dgvInputkembali.Rows(baris).Cells(0).Value & "'", conn)
+                rd = cmd.ExecuteReader
+                rd.Read()
+                Dim tambahstok As String = "update tbl_buku set stok = '" & rd.Item("stok") + dgvInputkembali.Rows(baris).Cells(3).Value & "' where id_buku = '" & dgvInputkembali.Rows(baris).Cells(0).Value & "'"
+                cmd = New OleDbCommand(tambahstok, conn)
+                cmd.ExecuteNonQuery()
+            Next
+
+            MessageBox.Show("Pengembalian Berhasil disimpan !", "Berhasil!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Call bersih_transaksi()
+            Call bersih_anggota()
+            Call nomoroto()
+        End If
+
     End Sub
 End Class

@@ -126,6 +126,18 @@
     <Compile Include="Data_Master_Adminfr.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Lainnya_Pengaturan.Designer.vb">
+      <DependentUpon>Lainnya_Pengaturan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Lainnya_Pengaturan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data_Master_Bukufr_Editstok.Designer.vb">
+      <DependentUpon>Data_Master_Bukufr_Editstok.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Data_Master_Bukufr_Editstok.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Data_Master_Bukufr_Add.Designer.vb">
       <DependentUpon>Data_Master_Bukufr_Add.vb</DependentUpon>
     </Compile>
@@ -228,6 +240,12 @@
     <EmbeddedResource Include="Data_Master_Adminfr.resx">
       <DependentUpon>Data_Master_Adminfr.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lainnya_Pengaturan.resx">
+      <DependentUpon>Lainnya_Pengaturan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data_Master_Bukufr_Editstok.resx">
+      <DependentUpon>Data_Master_Bukufr_Editstok.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Data_Master_Bukufr_Add.resx">
       <DependentUpon>Data_Master_Bukufr_Add.vb</DependentUpon>
     </EmbeddedResource>
@@ -329,6 +347,8 @@
     <None Include="Resources\add_rak1.png" />
     <None Include="Resources\delete_rak.png" />
     <None Include="Resources\delete_rak1.png" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\settings %281%29.png" />
     <Content Include="Taskbar_Icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

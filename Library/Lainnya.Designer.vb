@@ -26,9 +26,11 @@ Partial Class Lainnya
         Me.GunaGradientPanel1 = New Guna.UI.WinForms.GunaGradientPanel()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.btnpengaturan = New Guna.UI2.WinForms.Guna2TileButton()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnDataUbahKS = New Guna.UI2.WinForms.Guna2TileButton()
         Me.GunaGradientPanel1.SuspendLayout()
+        Me.Guna2Panel3.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -64,11 +66,40 @@ Partial Class Lainnya
         '
         Me.Guna2Panel3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Guna2Panel3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel3.Controls.Add(Me.btnpengaturan)
         Me.Guna2Panel3.Location = New System.Drawing.Point(226, 0)
         Me.Guna2Panel3.Name = "Guna2Panel3"
         Me.Guna2Panel3.ShadowDecoration.Parent = Me.Guna2Panel3
         Me.Guna2Panel3.Size = New System.Drawing.Size(229, 455)
         Me.Guna2Panel3.TabIndex = 4
+        '
+        'btnpengaturan
+        '
+        Me.btnpengaturan.Animated = True
+        Me.btnpengaturan.BackColor = System.Drawing.Color.Transparent
+        Me.btnpengaturan.BorderRadius = 5
+        Me.btnpengaturan.CheckedState.Parent = Me.btnpengaturan
+        Me.btnpengaturan.CustomImages.Parent = Me.btnpengaturan
+        Me.btnpengaturan.FillColor = System.Drawing.Color.Silver
+        Me.btnpengaturan.Font = New System.Drawing.Font("Segoe UI Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnpengaturan.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.btnpengaturan.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.btnpengaturan.HoverState.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btnpengaturan.HoverState.Image = Global.Library.My.Resources.Resources.settings__1_
+        Me.btnpengaturan.HoverState.Parent = Me.btnpengaturan
+        Me.btnpengaturan.Image = Global.Library.My.Resources.Resources.settings
+        Me.btnpengaturan.ImageOffset = New System.Drawing.Point(0, 15)
+        Me.btnpengaturan.ImageSize = New System.Drawing.Size(70, 70)
+        Me.btnpengaturan.Location = New System.Drawing.Point(47, 103)
+        Me.btnpengaturan.Name = "btnpengaturan"
+        Me.btnpengaturan.ShadowDecoration.BorderRadius = 5
+        Me.btnpengaturan.ShadowDecoration.Enabled = True
+        Me.btnpengaturan.ShadowDecoration.Parent = Me.btnpengaturan
+        Me.btnpengaturan.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(5, 0, 0, 5)
+        Me.btnpengaturan.Size = New System.Drawing.Size(150, 190)
+        Me.btnpengaturan.TabIndex = 7
+        Me.btnpengaturan.Text = "Pengaturan"
+        Me.btnpengaturan.TextOffset = New System.Drawing.Point(0, 6)
         '
         'Guna2Panel1
         '
@@ -122,6 +153,7 @@ Partial Class Lainnya
         Me.ShowInTaskbar = False
         Me.Text = "Lainnya"
         Me.GunaGradientPanel1.ResumeLayout(False)
+        Me.Guna2Panel3.ResumeLayout(False)
         Me.Guna2Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -132,4 +164,5 @@ Partial Class Lainnya
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents btnDataUbahKS As Guna.UI2.WinForms.Guna2TileButton
+    Friend WithEvents btnpengaturan As Guna.UI2.WinForms.Guna2TileButton
 End Class

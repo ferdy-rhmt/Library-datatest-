@@ -45,11 +45,17 @@ Public Class Data_Master_Bukufr
     End Sub
 
     Private Sub txtcaribuku_TextChanged(sender As Object, e As EventArgs) Handles txtcaribuku.TextChanged
+        Call Koneksi()
         cmd = New OleDbCommand("select * from tbl_buku where id_buku like '%" & txtcaribuku.Text & "%' ", conn)
         rd = cmd.ExecuteReader
         dgvDaftarBuku.Rows.Clear()
         Do While rd.Read = True
             dgvDaftarBuku.Rows.Add(rd(0), rd(1), rd(2), rd(3), rd(4))
         Loop
+    End Sub
+
+    Private Sub btneditstok_Click(sender As Object, e As EventArgs) Handles btneditstok.Click
+        Data_Master_Bukufr_Editstok.ShowDialog()
+        Data_Master_Bukufr_Editstok.Refresh()
     End Sub
 End Class
