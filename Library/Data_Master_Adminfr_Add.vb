@@ -52,7 +52,8 @@ Public Class Data_Master_Adminfr_Add
             Call Koneksi()
             cmd = New OleDbCommand("insert into tbl_admin values ('" & txtidadmin.Text &
                                                       "','" & txtNameAdmin.Text &
-                                                      "','" & txtretypepassw.Text & "')", conn)
+                                                      "','" & txtretypepassw.Text &
+                                                      "','" & cblevel.Text & "')", conn)
             cmd.ExecuteNonQuery()
             MessageBox.Show("Data berhasil disimpan!", "Berhasil!", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Data_Master_Adminfr.dgvAddAdmin.Refresh()

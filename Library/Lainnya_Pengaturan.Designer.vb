@@ -71,7 +71,7 @@ Partial Class Lainnya_Pengaturan
         Me.GunaLabel1.AutoSize = True
         Me.GunaLabel1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GunaLabel1.ForeColor = System.Drawing.Color.LightGray
-        Me.GunaLabel1.Location = New System.Drawing.Point(95, 7)
+        Me.GunaLabel1.Location = New System.Drawing.Point(137, 5)
         Me.GunaLabel1.Name = "GunaLabel1"
         Me.GunaLabel1.Size = New System.Drawing.Size(101, 14)
         Me.GunaLabel1.TabIndex = 0
@@ -368,6 +368,7 @@ Partial Class Lainnya_Pengaturan
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.TopMost = True
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
         CType(Me.txtbatasbuku, System.ComponentModel.ISupportInitialize).EndInit()

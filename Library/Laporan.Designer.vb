@@ -24,14 +24,11 @@ Partial Class Laporan
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Laporan))
         Me.GunaGradientPanel1 = New Guna.UI.WinForms.GunaGradientPanel()
-        Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.btnLaporanDataM = New Guna.UI2.WinForms.Guna2TileButton()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.btnLaporandenda = New Guna.UI2.WinForms.Guna2TileButton()
+        Me.btnLaporanPengembalian = New Guna.UI2.WinForms.Guna2TileButton()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnLaporanPeminjaman = New Guna.UI2.WinForms.Guna2TileButton()
         Me.GunaGradientPanel1.SuspendLayout()
-        Me.Guna2Panel2.SuspendLayout()
         Me.Guna2Panel3.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -40,7 +37,6 @@ Partial Class Laporan
         '
         Me.GunaGradientPanel1.BackgroundImage = CType(resources.GetObject("GunaGradientPanel1.BackgroundImage"), System.Drawing.Image)
         Me.GunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GunaGradientPanel1.Controls.Add(Me.Guna2Panel2)
         Me.GunaGradientPanel1.Controls.Add(Me.Guna2Panel3)
         Me.GunaGradientPanel1.Controls.Add(Me.Guna2Panel1)
         Me.GunaGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -54,84 +50,45 @@ Partial Class Laporan
         Me.GunaGradientPanel1.TabIndex = 3
         Me.GunaGradientPanel1.Text = "GunaGradientPanel1"
         '
-        'Guna2Panel2
-        '
-        Me.Guna2Panel2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Guna2Panel2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel2.Controls.Add(Me.btnLaporanDataM)
-        Me.Guna2Panel2.Location = New System.Drawing.Point(455, 0)
-        Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.ShadowDecoration.Parent = Me.Guna2Panel2
-        Me.Guna2Panel2.Size = New System.Drawing.Size(226, 455)
-        Me.Guna2Panel2.TabIndex = 4
-        '
-        'btnLaporanDataM
-        '
-        Me.btnLaporanDataM.Animated = True
-        Me.btnLaporanDataM.BackColor = System.Drawing.Color.Transparent
-        Me.btnLaporanDataM.BorderRadius = 5
-        Me.btnLaporanDataM.CheckedState.Parent = Me.btnLaporanDataM
-        Me.btnLaporanDataM.CustomImages.Parent = Me.btnLaporanDataM
-        Me.btnLaporanDataM.FillColor = System.Drawing.Color.Silver
-        Me.btnLaporanDataM.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLaporanDataM.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.btnLaporanDataM.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.btnLaporanDataM.HoverState.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btnLaporanDataM.HoverState.Image = Global.Library.My.Resources.Resources.lap_data_master1
-        Me.btnLaporanDataM.HoverState.Parent = Me.btnLaporanDataM
-        Me.btnLaporanDataM.Image = Global.Library.My.Resources.Resources.lap_data_master
-        Me.btnLaporanDataM.ImageOffset = New System.Drawing.Point(0, 15)
-        Me.btnLaporanDataM.ImageSize = New System.Drawing.Size(70, 70)
-        Me.btnLaporanDataM.Location = New System.Drawing.Point(40, 121)
-        Me.btnLaporanDataM.Name = "btnLaporanDataM"
-        Me.btnLaporanDataM.ShadowDecoration.BorderRadius = 5
-        Me.btnLaporanDataM.ShadowDecoration.Enabled = True
-        Me.btnLaporanDataM.ShadowDecoration.Parent = Me.btnLaporanDataM
-        Me.btnLaporanDataM.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(5, 0, 0, 5)
-        Me.btnLaporanDataM.Size = New System.Drawing.Size(150, 190)
-        Me.btnLaporanDataM.TabIndex = 3
-        Me.btnLaporanDataM.Text = "Lap. Data Master"
-        Me.btnLaporanDataM.TextOffset = New System.Drawing.Point(0, 10)
-        '
         'Guna2Panel3
         '
         Me.Guna2Panel3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Guna2Panel3.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel3.Controls.Add(Me.btnLaporandenda)
-        Me.Guna2Panel3.Location = New System.Drawing.Point(226, 0)
+        Me.Guna2Panel3.Controls.Add(Me.btnLaporanPengembalian)
+        Me.Guna2Panel3.Location = New System.Drawing.Point(337, 0)
         Me.Guna2Panel3.Name = "Guna2Panel3"
         Me.Guna2Panel3.ShadowDecoration.Parent = Me.Guna2Panel3
-        Me.Guna2Panel3.Size = New System.Drawing.Size(229, 455)
+        Me.Guna2Panel3.Size = New System.Drawing.Size(343, 455)
         Me.Guna2Panel3.TabIndex = 4
         '
-        'btnLaporandenda
+        'btnLaporanPengembalian
         '
-        Me.btnLaporandenda.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnLaporandenda.Animated = True
-        Me.btnLaporandenda.BackColor = System.Drawing.Color.Transparent
-        Me.btnLaporandenda.BorderRadius = 5
-        Me.btnLaporandenda.CheckedState.Parent = Me.btnLaporandenda
-        Me.btnLaporandenda.CustomImages.Parent = Me.btnLaporandenda
-        Me.btnLaporandenda.FillColor = System.Drawing.Color.Silver
-        Me.btnLaporandenda.Font = New System.Drawing.Font("Segoe UI Light", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLaporandenda.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.btnLaporandenda.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.btnLaporandenda.HoverState.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btnLaporandenda.HoverState.Image = Global.Library.My.Resources.Resources.lap_denda1
-        Me.btnLaporandenda.HoverState.Parent = Me.btnLaporandenda
-        Me.btnLaporandenda.Image = Global.Library.My.Resources.Resources.lap_denda
-        Me.btnLaporandenda.ImageOffset = New System.Drawing.Point(0, 15)
-        Me.btnLaporandenda.ImageSize = New System.Drawing.Size(70, 70)
-        Me.btnLaporandenda.Location = New System.Drawing.Point(42, 121)
-        Me.btnLaporandenda.Name = "btnLaporandenda"
-        Me.btnLaporandenda.ShadowDecoration.BorderRadius = 5
-        Me.btnLaporandenda.ShadowDecoration.Enabled = True
-        Me.btnLaporandenda.ShadowDecoration.Parent = Me.btnLaporandenda
-        Me.btnLaporandenda.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(5, 0, 0, 5)
-        Me.btnLaporandenda.Size = New System.Drawing.Size(150, 190)
-        Me.btnLaporandenda.TabIndex = 2
-        Me.btnLaporandenda.Text = "Lap. Denda"
-        Me.btnLaporandenda.TextOffset = New System.Drawing.Point(0, 8)
+        Me.btnLaporanPengembalian.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnLaporanPengembalian.Animated = True
+        Me.btnLaporanPengembalian.BackColor = System.Drawing.Color.Transparent
+        Me.btnLaporanPengembalian.BorderRadius = 5
+        Me.btnLaporanPengembalian.CheckedState.Parent = Me.btnLaporanPengembalian
+        Me.btnLaporanPengembalian.CustomImages.Parent = Me.btnLaporanPengembalian
+        Me.btnLaporanPengembalian.FillColor = System.Drawing.Color.Silver
+        Me.btnLaporanPengembalian.Font = New System.Drawing.Font("Segoe UI Light", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLaporanPengembalian.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.btnLaporanPengembalian.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.btnLaporanPengembalian.HoverState.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btnLaporanPengembalian.HoverState.Image = Global.Library.My.Resources.Resources.lap_denda1
+        Me.btnLaporanPengembalian.HoverState.Parent = Me.btnLaporanPengembalian
+        Me.btnLaporanPengembalian.Image = Global.Library.My.Resources.Resources.lap_denda
+        Me.btnLaporanPengembalian.ImageOffset = New System.Drawing.Point(0, 15)
+        Me.btnLaporanPengembalian.ImageSize = New System.Drawing.Size(70, 70)
+        Me.btnLaporanPengembalian.Location = New System.Drawing.Point(74, 85)
+        Me.btnLaporanPengembalian.Name = "btnLaporanPengembalian"
+        Me.btnLaporanPengembalian.ShadowDecoration.BorderRadius = 5
+        Me.btnLaporanPengembalian.ShadowDecoration.Enabled = True
+        Me.btnLaporanPengembalian.ShadowDecoration.Parent = Me.btnLaporanPengembalian
+        Me.btnLaporanPengembalian.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(5, 0, 0, 5)
+        Me.btnLaporanPengembalian.Size = New System.Drawing.Size(200, 258)
+        Me.btnLaporanPengembalian.TabIndex = 2
+        Me.btnLaporanPengembalian.Text = "Lap. Pengembalian"
+        Me.btnLaporanPengembalian.TextOffset = New System.Drawing.Point(0, 8)
         '
         'Guna2Panel1
         '
@@ -141,7 +98,7 @@ Partial Class Laporan
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
-        Me.Guna2Panel1.Size = New System.Drawing.Size(226, 455)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(338, 455)
         Me.Guna2Panel1.TabIndex = 3
         '
         'btnLaporanPeminjaman
@@ -161,13 +118,13 @@ Partial Class Laporan
         Me.btnLaporanPeminjaman.Image = Global.Library.My.Resources.Resources.lap_peminjaman
         Me.btnLaporanPeminjaman.ImageOffset = New System.Drawing.Point(0, 15)
         Me.btnLaporanPeminjaman.ImageSize = New System.Drawing.Size(70, 70)
-        Me.btnLaporanPeminjaman.Location = New System.Drawing.Point(38, 121)
+        Me.btnLaporanPeminjaman.Location = New System.Drawing.Point(70, 85)
         Me.btnLaporanPeminjaman.Name = "btnLaporanPeminjaman"
         Me.btnLaporanPeminjaman.ShadowDecoration.BorderRadius = 5
         Me.btnLaporanPeminjaman.ShadowDecoration.Enabled = True
         Me.btnLaporanPeminjaman.ShadowDecoration.Parent = Me.btnLaporanPeminjaman
         Me.btnLaporanPeminjaman.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(5, 0, 0, 5)
-        Me.btnLaporanPeminjaman.Size = New System.Drawing.Size(150, 190)
+        Me.btnLaporanPeminjaman.Size = New System.Drawing.Size(200, 258)
         Me.btnLaporanPeminjaman.TabIndex = 4
         Me.btnLaporanPeminjaman.Text = "Lap. Peminjaman"
         Me.btnLaporanPeminjaman.TextOffset = New System.Drawing.Point(0, 10)
@@ -185,7 +142,6 @@ Partial Class Laporan
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.GunaGradientPanel1.ResumeLayout(False)
-        Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel3.ResumeLayout(False)
         Me.Guna2Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -193,10 +149,8 @@ Partial Class Laporan
     End Sub
 
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents btnLaporandenda As Guna.UI2.WinForms.Guna2TileButton
+    Friend WithEvents btnLaporanPengembalian As Guna.UI2.WinForms.Guna2TileButton
     Friend WithEvents GunaGradientPanel1 As Guna.UI.WinForms.GunaGradientPanel
-    Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents btnLaporanDataM As Guna.UI2.WinForms.Guna2TileButton
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents btnLaporanPeminjaman As Guna.UI2.WinForms.Guna2TileButton
 End Class

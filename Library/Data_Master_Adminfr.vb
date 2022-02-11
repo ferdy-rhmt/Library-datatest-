@@ -6,11 +6,12 @@ Public Class Data_Master_Adminfr
         rd = cmd.ExecuteReader
         dgvAddAdmin.Rows.Clear()
         Do While rd.Read()
-            dgvAddAdmin.Rows.Add(rd(0), rd(1), rd(2))
+            dgvAddAdmin.Rows.Add(rd(0), rd(1), rd(2), rd(3))
         Loop
     End Sub
 
     Private Sub Data_Master_Adminfr_Load(sender As Object, e As EventArgs) Handles Me.Load
+        dgvAddAdmin.Rows.Clear()
         Call tampildata()
     End Sub
 
@@ -21,9 +22,11 @@ Public Class Data_Master_Adminfr
     End Sub
 
     Private Sub btnDelAdmin_Click(sender As Object, e As EventArgs) Handles btnDelAdmin.Click
-        'Database
-        'custMsgBoxx2.Show()
+        cmd = New OleDbCommand("delete * from tbl_admin where id_admin like '%" & lblidadmin.Text & "%' ", conn)
+        cmd.ExecuteNonQuery()
+        MessageBox.Show("Data Berhasil dihapus!")
 
+        forminpanel(New Data_Master_Adminfr)
     End Sub
 
     Public Sub dgvAddAdmin_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles dgvAddAdmin.CellFormatting
@@ -40,5 +43,12 @@ Public Class Data_Master_Adminfr
 
         MessageBox.Show(" ID Admin " + " = " + dgvAddAdmin.Item(0, i).Value & vbNewLine &
                         " Password " + " = " + dgvAddAdmin.Item(2, i).Value, "Info Admin", MessageBoxButtons.OK)
+    End Sub
+
+    Private Sub dgvAddAdmin_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvAddAdmin.CellMouseClick
+        Dim i As Integer
+        i = dgvAddAdmin.CurrentRow.Index
+
+        lblidadmin.Text = dgvAddAdmin.Item(0, i).Value
     End Sub
 End Class

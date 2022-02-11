@@ -121,6 +121,19 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="GunaCirclePictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAbVJREFUOE+NkztLw1AYhpNzUgdX/QGi4uZPsC1atYo0QhuhdXMSQTelixgVvOGl
+        FKGDDi2V2noZxEFQIZuICKJgJwXFpagoaiGgTT+/k1aJTaN+5CGHnPd9ArlwxiFjrZXCbGcwu0vk3CEv
+        2xJ+mSYCRoJIZTFuHjLqcghhD6AAUAAoACyU4ijGzYMCpxAW/xI4i/HC8J1hjojJmCApCukdO6MoWErU
+        wXKyBgRzGYSh6BnLIlEqKWhonybUE9X2z59geGMb6KrPVDISOj4BlrX1KBpKSEHQFdE+NIDVo30USGWL
+        XyiZNLBshVFAOuZQkC8rqFr3QW1KhOYtl74uL3DPWAr08qYL5J1Gff2nQECBbb33m+qkBPWpbmjZatXX
+        vwoOLi8g8/qCgbwleODZQnB6dQPpuwxcZx7LcvvwDB85JioR8ChQ33PwnFXh/uXNErbPyuq7ZnyNM3bi
+        ieWpuAaCgf4RH4xPtsHElBcG5UF2x2+wDFjOI01MEMAvkV34QUNfHOwDIR22Lt0v4uc49zzl2mcjfNeK
+        Sjxx7X+sqURMRah3jxZ+CDbuBZ49j3/RscgXShz3CTLPCjGTw+ODAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAYAAAAAAAEAIACAHAAAZgAAAICAAAABACAAKAgBAOYcAABAQAAAAQAgAChCAAAOJQEAMDAAAAEA
@@ -1912,19 +1925,6 @@
   <metadata name="GunaDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>142, 17</value>
   </metadata>
-  <data name="GunaCirclePictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAbVJREFUOE+NkztLw1AYhpNzUgdX/QGi4uZPsC1atYo0QhuhdXMSQTelixgVvOGl
-        FKGDDi2V2noZxEFQIZuICKJgJwXFpagoaiGgTT+/k1aJTaN+5CGHnPd9ArlwxiFjrZXCbGcwu0vk3CEv
-        2xJ+mSYCRoJIZTFuHjLqcghhD6AAUAAoACyU4ijGzYMCpxAW/xI4i/HC8J1hjojJmCApCukdO6MoWErU
-        wXKyBgRzGYSh6BnLIlEqKWhonybUE9X2z59geGMb6KrPVDISOj4BlrX1KBpKSEHQFdE+NIDVo30USGWL
-        XyiZNLBshVFAOuZQkC8rqFr3QW1KhOYtl74uL3DPWAr08qYL5J1Gff2nQECBbb33m+qkBPWpbmjZatXX
-        vwoOLi8g8/qCgbwleODZQnB6dQPpuwxcZx7LcvvwDB85JioR8ChQ33PwnFXh/uXNErbPyuq7ZnyNM3bi
-        ieWpuAaCgf4RH4xPtsHElBcG5UF2x2+wDFjOI01MEMAvkV34QUNfHOwDIR22Lt0v4uc49zzl2mcjfNeK
-        Sjxx7X+sqURMRah3jxZ+CDbuBZ49j3/RscgXShz3CTLPCjGTw+ODAAAAAElFTkSuQmCC
-</value>
-  </data>
   <metadata name="Guna2ShadowForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>296, 17</value>
   </metadata>

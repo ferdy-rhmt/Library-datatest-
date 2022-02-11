@@ -266,7 +266,7 @@ Partial Class Login_Admin
         Me.txtusername.Name = "txtusername"
         Me.txtusername.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtusername.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtusername.PlaceholderText = "Username"
+        Me.txtusername.PlaceholderText = "ID Admin"
         Me.txtusername.SelectedText = ""
         Me.txtusername.ShadowDecoration.BorderRadius = 10
         Me.txtusername.ShadowDecoration.Depth = 25

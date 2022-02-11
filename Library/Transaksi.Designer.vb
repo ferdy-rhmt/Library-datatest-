@@ -29,7 +29,7 @@ Partial Class Transaksi
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnTransaksiPeminjaman = New Guna.UI2.WinForms.Guna2TileButton()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.btnTransaksiCari = New Guna.UI2.WinForms.Guna2TileButton()
+        Me.btnHistory = New Guna.UI2.WinForms.Guna2TileButton()
         Me.GunaGradientPanel1.SuspendLayout()
         Me.Guna2Panel2.SuspendLayout()
         Me.Guna2Panel3.SuspendLayout()
@@ -137,40 +137,40 @@ Partial Class Transaksi
         '
         Me.Guna2Panel1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Guna2Panel1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel1.Controls.Add(Me.btnTransaksiCari)
+        Me.Guna2Panel1.Controls.Add(Me.btnHistory)
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
         Me.Guna2Panel1.Size = New System.Drawing.Size(226, 455)
         Me.Guna2Panel1.TabIndex = 3
         '
-        'btnTransaksiCari
+        'btnHistory
         '
-        Me.btnTransaksiCari.Animated = True
-        Me.btnTransaksiCari.BackColor = System.Drawing.Color.Transparent
-        Me.btnTransaksiCari.BorderRadius = 5
-        Me.btnTransaksiCari.CheckedState.Parent = Me.btnTransaksiCari
-        Me.btnTransaksiCari.CustomImages.Parent = Me.btnTransaksiCari
-        Me.btnTransaksiCari.FillColor = System.Drawing.Color.Silver
-        Me.btnTransaksiCari.Font = New System.Drawing.Font("Segoe UI Light", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTransaksiCari.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.btnTransaksiCari.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.btnTransaksiCari.HoverState.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btnTransaksiCari.HoverState.Image = Global.Library.My.Resources.Resources.cari_buku1
-        Me.btnTransaksiCari.HoverState.Parent = Me.btnTransaksiCari
-        Me.btnTransaksiCari.Image = Global.Library.My.Resources.Resources.cari_buku
-        Me.btnTransaksiCari.ImageOffset = New System.Drawing.Point(0, 15)
-        Me.btnTransaksiCari.ImageSize = New System.Drawing.Size(70, 70)
-        Me.btnTransaksiCari.Location = New System.Drawing.Point(38, 121)
-        Me.btnTransaksiCari.Name = "btnTransaksiCari"
-        Me.btnTransaksiCari.ShadowDecoration.BorderRadius = 5
-        Me.btnTransaksiCari.ShadowDecoration.Enabled = True
-        Me.btnTransaksiCari.ShadowDecoration.Parent = Me.btnTransaksiCari
-        Me.btnTransaksiCari.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(5, 0, 0, 5)
-        Me.btnTransaksiCari.Size = New System.Drawing.Size(150, 190)
-        Me.btnTransaksiCari.TabIndex = 4
-        Me.btnTransaksiCari.Text = "Cari Buku"
-        Me.btnTransaksiCari.TextOffset = New System.Drawing.Point(0, 6)
+        Me.btnHistory.Animated = True
+        Me.btnHistory.BackColor = System.Drawing.Color.Transparent
+        Me.btnHistory.BorderRadius = 5
+        Me.btnHistory.CheckedState.Parent = Me.btnHistory
+        Me.btnHistory.CustomImages.Parent = Me.btnHistory
+        Me.btnHistory.FillColor = System.Drawing.Color.Silver
+        Me.btnHistory.Font = New System.Drawing.Font("Segoe UI Light", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHistory.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.btnHistory.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.btnHistory.HoverState.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btnHistory.HoverState.Image = Global.Library.My.Resources.Resources.file__1_
+        Me.btnHistory.HoverState.Parent = Me.btnHistory
+        Me.btnHistory.Image = Global.Library.My.Resources.Resources.file
+        Me.btnHistory.ImageOffset = New System.Drawing.Point(0, 15)
+        Me.btnHistory.ImageSize = New System.Drawing.Size(70, 70)
+        Me.btnHistory.Location = New System.Drawing.Point(38, 121)
+        Me.btnHistory.Name = "btnHistory"
+        Me.btnHistory.ShadowDecoration.BorderRadius = 5
+        Me.btnHistory.ShadowDecoration.Enabled = True
+        Me.btnHistory.ShadowDecoration.Parent = Me.btnHistory
+        Me.btnHistory.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(5, 0, 0, 5)
+        Me.btnHistory.Size = New System.Drawing.Size(150, 190)
+        Me.btnHistory.TabIndex = 4
+        Me.btnHistory.Text = "History"
+        Me.btnHistory.TextOffset = New System.Drawing.Point(0, 6)
         '
         'Transaksi
         '
@@ -196,7 +196,7 @@ Partial Class Transaksi
     Friend WithEvents btnTransaksiPeminjaman As Guna.UI2.WinForms.Guna2TileButton
     Friend WithEvents GunaGradientPanel1 As Guna.UI.WinForms.GunaGradientPanel
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents btnTransaksiCari As Guna.UI2.WinForms.Guna2TileButton
+    Friend WithEvents btnHistory As Guna.UI2.WinForms.Guna2TileButton
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents btnTransaksiPengembalian As Guna.UI2.WinForms.Guna2TileButton
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel

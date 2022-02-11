@@ -23,10 +23,11 @@ Partial Class MainForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation2 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
         Dim Animation1 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
+        Dim Animation2 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
         Me.pnlkiri = New System.Windows.Forms.Panel()
+        Me.lblidadmin = New System.Windows.Forms.Label()
         Me.btnAvatar = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblNamaAdmin = New System.Windows.Forms.Label()
@@ -59,6 +60,7 @@ Partial Class MainForm
         Me.Guna2ResizeBox1 = New Guna.UI2.WinForms.Guna2ResizeBox()
         Me.BunifuTransition2 = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
+        Me.lblleveladmin = New System.Windows.Forms.Label()
         Me.pnlkiri.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.pnlatas.SuspendLayout()
@@ -69,6 +71,8 @@ Partial Class MainForm
         'pnlkiri
         '
         Me.pnlkiri.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.pnlkiri.Controls.Add(Me.lblleveladmin)
+        Me.pnlkiri.Controls.Add(Me.lblidadmin)
         Me.pnlkiri.Controls.Add(Me.btnAvatar)
         Me.pnlkiri.Controls.Add(Me.Label4)
         Me.pnlkiri.Controls.Add(Me.lblNamaAdmin)
@@ -90,6 +94,19 @@ Partial Class MainForm
         Me.pnlkiri.Name = "pnlkiri"
         Me.pnlkiri.Size = New System.Drawing.Size(270, 625)
         Me.pnlkiri.TabIndex = 0
+        '
+        'lblidadmin
+        '
+        Me.BunifuTransition1.SetDecoration(Me.lblidadmin, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition2.SetDecoration(Me.lblidadmin, BunifuAnimatorNS.DecorationType.None)
+        Me.lblidadmin.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblidadmin.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.lblidadmin.Location = New System.Drawing.Point(190, 8)
+        Me.lblidadmin.Name = "lblidadmin"
+        Me.lblidadmin.Size = New System.Drawing.Size(68, 20)
+        Me.lblidadmin.TabIndex = 14
+        Me.lblidadmin.Text = "adm001"
+        Me.lblidadmin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'btnAvatar
         '
@@ -125,10 +142,11 @@ Partial Class MainForm
         Me.BunifuTransition2.SetDecoration(Me.lblNamaAdmin, BunifuAnimatorNS.DecorationType.None)
         Me.lblNamaAdmin.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNamaAdmin.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.lblNamaAdmin.Location = New System.Drawing.Point(94, 34)
+        Me.lblNamaAdmin.Location = New System.Drawing.Point(94, 37)
         Me.lblNamaAdmin.Name = "lblNamaAdmin"
         Me.lblNamaAdmin.Size = New System.Drawing.Size(151, 20)
         Me.lblNamaAdmin.TabIndex = 12
+        Me.lblNamaAdmin.Text = "nama admin"
         '
         'Label2
         '
@@ -150,7 +168,7 @@ Partial Class MainForm
         Me.BunifuTransition2.SetDecoration(Me.lblmenuutama, BunifuAnimatorNS.DecorationType.None)
         Me.lblmenuutama.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblmenuutama.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.lblmenuutama.Location = New System.Drawing.Point(7, 120)
+        Me.lblmenuutama.Location = New System.Drawing.Point(7, 144)
         Me.lblmenuutama.Name = "lblmenuutama"
         Me.lblmenuutama.Size = New System.Drawing.Size(103, 21)
         Me.lblmenuutama.TabIndex = 10
@@ -191,7 +209,7 @@ Partial Class MainForm
         Me.lblhover4.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BunifuTransition1.SetDecoration(Me.lblhover4, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition2.SetDecoration(Me.lblhover4, BunifuAnimatorNS.DecorationType.None)
-        Me.lblhover4.Location = New System.Drawing.Point(0, 285)
+        Me.lblhover4.Location = New System.Drawing.Point(0, 309)
         Me.lblhover4.Name = "lblhover4"
         Me.lblhover4.Size = New System.Drawing.Size(5, 20)
         Me.lblhover4.TabIndex = 5
@@ -207,7 +225,7 @@ Partial Class MainForm
         Me.btnLainnya.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnLainnya.Image = Global.Library.My.Resources.Resources.lainnya
         Me.btnLainnya.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnLainnya.Location = New System.Drawing.Point(0, 278)
+        Me.btnLainnya.Location = New System.Drawing.Point(0, 302)
         Me.btnLainnya.Name = "btnLainnya"
         Me.btnLainnya.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
         Me.btnLainnya.Size = New System.Drawing.Size(270, 35)
@@ -221,7 +239,7 @@ Partial Class MainForm
         Me.lblhover3.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BunifuTransition1.SetDecoration(Me.lblhover3, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition2.SetDecoration(Me.lblhover3, BunifuAnimatorNS.DecorationType.None)
-        Me.lblhover3.Location = New System.Drawing.Point(0, 244)
+        Me.lblhover3.Location = New System.Drawing.Point(0, 268)
         Me.lblhover3.Name = "lblhover3"
         Me.lblhover3.Size = New System.Drawing.Size(5, 20)
         Me.lblhover3.TabIndex = 3
@@ -237,7 +255,7 @@ Partial Class MainForm
         Me.btnLaporan.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnLaporan.Image = Global.Library.My.Resources.Resources.laporan
         Me.btnLaporan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnLaporan.Location = New System.Drawing.Point(0, 237)
+        Me.btnLaporan.Location = New System.Drawing.Point(0, 261)
         Me.btnLaporan.Name = "btnLaporan"
         Me.btnLaporan.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
         Me.btnLaporan.Size = New System.Drawing.Size(270, 35)
@@ -251,7 +269,7 @@ Partial Class MainForm
         Me.lblhover2.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BunifuTransition1.SetDecoration(Me.lblhover2, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition2.SetDecoration(Me.lblhover2, BunifuAnimatorNS.DecorationType.None)
-        Me.lblhover2.Location = New System.Drawing.Point(0, 203)
+        Me.lblhover2.Location = New System.Drawing.Point(0, 227)
         Me.lblhover2.Name = "lblhover2"
         Me.lblhover2.Size = New System.Drawing.Size(5, 20)
         Me.lblhover2.TabIndex = 1
@@ -262,7 +280,7 @@ Partial Class MainForm
         Me.lblhover1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BunifuTransition1.SetDecoration(Me.lblhover1, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuTransition2.SetDecoration(Me.lblhover1, BunifuAnimatorNS.DecorationType.None)
-        Me.lblhover1.Location = New System.Drawing.Point(0, 162)
+        Me.lblhover1.Location = New System.Drawing.Point(0, 186)
         Me.lblhover1.Name = "lblhover1"
         Me.lblhover1.Size = New System.Drawing.Size(5, 20)
         Me.lblhover1.TabIndex = 1
@@ -278,7 +296,7 @@ Partial Class MainForm
         Me.btnTransaksi.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnTransaksi.Image = Global.Library.My.Resources.Resources.transaksi
         Me.btnTransaksi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnTransaksi.Location = New System.Drawing.Point(0, 196)
+        Me.btnTransaksi.Location = New System.Drawing.Point(0, 220)
         Me.btnTransaksi.Name = "btnTransaksi"
         Me.btnTransaksi.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
         Me.btnTransaksi.Size = New System.Drawing.Size(270, 35)
@@ -297,7 +315,7 @@ Partial Class MainForm
         Me.btnDataMaster.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnDataMaster.Image = Global.Library.My.Resources.Resources.data_master
         Me.btnDataMaster.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDataMaster.Location = New System.Drawing.Point(0, 155)
+        Me.btnDataMaster.Location = New System.Drawing.Point(0, 179)
         Me.btnDataMaster.Name = "btnDataMaster"
         Me.btnDataMaster.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
         Me.btnDataMaster.Size = New System.Drawing.Size(270, 35)
@@ -451,22 +469,22 @@ Partial Class MainForm
         '
         Me.BunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide
         Me.BunifuTransition1.Cursor = Nothing
-        Animation2.AnimateOnlyDifferences = True
-        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
-        Animation2.LeafCoeff = 0!
-        Animation2.MaxTime = 1.0!
-        Animation2.MinTime = 0!
-        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
-        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
-        Animation2.MosaicSize = 0
-        Animation2.Padding = New System.Windows.Forms.Padding(0)
-        Animation2.RotateCoeff = 0!
-        Animation2.RotateLimit = 0!
-        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
-        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
-        Animation2.TimeCoeff = 0!
-        Animation2.TransparencyCoeff = 0!
-        Me.BunifuTransition1.DefaultAnimation = Animation2
+        Animation1.AnimateOnlyDifferences = True
+        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
+        Animation1.LeafCoeff = 0!
+        Animation1.MaxTime = 1.0!
+        Animation1.MinTime = 0!
+        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
+        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
+        Animation1.MosaicSize = 0
+        Animation1.Padding = New System.Windows.Forms.Padding(0)
+        Animation1.RotateCoeff = 0!
+        Animation1.RotateLimit = 0!
+        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
+        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
+        Animation1.TimeCoeff = 0!
+        Animation1.TransparencyCoeff = 0!
+        Me.BunifuTransition1.DefaultAnimation = Animation1
         Me.BunifuTransition1.Interval = 5
         Me.BunifuTransition1.MaxAnimationTime = 1000
         Me.BunifuTransition1.TimeStep = 0.05!
@@ -509,25 +527,37 @@ Partial Class MainForm
         '
         Me.BunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide
         Me.BunifuTransition2.Cursor = Nothing
-        Animation1.AnimateOnlyDifferences = True
-        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
-        Animation1.LeafCoeff = 0!
-        Animation1.MaxTime = 1.0!
-        Animation1.MinTime = 0!
-        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
-        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
-        Animation1.MosaicSize = 0
-        Animation1.Padding = New System.Windows.Forms.Padding(0)
-        Animation1.RotateCoeff = 0!
-        Animation1.RotateLimit = 0!
-        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
-        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
-        Animation1.TimeCoeff = 0!
-        Animation1.TransparencyCoeff = 0!
-        Me.BunifuTransition2.DefaultAnimation = Animation1
+        Animation2.AnimateOnlyDifferences = True
+        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
+        Animation2.LeafCoeff = 0!
+        Animation2.MaxTime = 1.0!
+        Animation2.MinTime = 0!
+        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
+        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
+        Animation2.MosaicSize = 0
+        Animation2.Padding = New System.Windows.Forms.Padding(0)
+        Animation2.RotateCoeff = 0!
+        Animation2.RotateLimit = 0!
+        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
+        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
+        Animation2.TimeCoeff = 0!
+        Animation2.TransparencyCoeff = 0!
+        Me.BunifuTransition2.DefaultAnimation = Animation2
         Me.BunifuTransition2.Interval = 3
         Me.BunifuTransition2.MaxAnimationTime = 1300
         Me.BunifuTransition2.TimeStep = 0.013!
+        '
+        'lblleveladmin
+        '
+        Me.BunifuTransition1.SetDecoration(Me.lblleveladmin, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition2.SetDecoration(Me.lblleveladmin, BunifuAnimatorNS.DecorationType.None)
+        Me.lblleveladmin.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblleveladmin.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.lblleveladmin.Location = New System.Drawing.Point(96, 62)
+        Me.lblleveladmin.Name = "lblleveladmin"
+        Me.lblleveladmin.Size = New System.Drawing.Size(149, 20)
+        Me.lblleveladmin.TabIndex = 15
+        Me.lblleveladmin.Text = "Master"
         '
         'MainForm
         '
@@ -588,4 +618,6 @@ Partial Class MainForm
     Friend WithEvents Guna2ResizeBox1 As Guna.UI2.WinForms.Guna2ResizeBox
     Friend WithEvents Guna2ControlBox2 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents lblnamamenu As Label
+    Friend WithEvents lblidadmin As Label
+    Friend WithEvents lblleveladmin As Label
 End Class

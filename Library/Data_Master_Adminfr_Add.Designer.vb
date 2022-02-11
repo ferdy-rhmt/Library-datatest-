@@ -45,6 +45,9 @@ Partial Class Data_Master_Adminfr_Add
         Me.GunaLabel10 = New Guna.UI.WinForms.GunaLabel()
         Me.txtidadmin = New Guna.UI2.WinForms.Guna2TextBox()
         Me.GunaLabel11 = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel12 = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel13 = New Guna.UI.WinForms.GunaLabel()
+        Me.cblevel = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -112,7 +115,7 @@ Partial Class Data_Master_Adminfr_Add
         Me.GunaLabel5.BackColor = System.Drawing.Color.Transparent
         Me.GunaLabel5.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GunaLabel5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.GunaLabel5.Location = New System.Drawing.Point(12, 183)
+        Me.GunaLabel5.Location = New System.Drawing.Point(12, 206)
         Me.GunaLabel5.Name = "GunaLabel5"
         Me.GunaLabel5.Size = New System.Drawing.Size(69, 23)
         Me.GunaLabel5.TabIndex = 5
@@ -125,7 +128,7 @@ Partial Class Data_Master_Adminfr_Add
         Me.GunaLabel6.BackColor = System.Drawing.Color.Transparent
         Me.GunaLabel6.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GunaLabel6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.GunaLabel6.Location = New System.Drawing.Point(12, 224)
+        Me.GunaLabel6.Location = New System.Drawing.Point(12, 247)
         Me.GunaLabel6.Name = "GunaLabel6"
         Me.GunaLabel6.Size = New System.Drawing.Size(69, 23)
         Me.GunaLabel6.TabIndex = 6
@@ -183,7 +186,7 @@ Partial Class Data_Master_Adminfr_Add
         Me.txtpassw.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
         Me.txtpassw.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtpassw.HoverState.Parent = Me.txtpassw
-        Me.txtpassw.Location = New System.Drawing.Point(98, 185)
+        Me.txtpassw.Location = New System.Drawing.Point(98, 208)
         Me.txtpassw.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtpassw.Name = "txtpassw"
         Me.txtpassw.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -215,7 +218,7 @@ Partial Class Data_Master_Adminfr_Add
         Me.txtretypepassw.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
         Me.txtretypepassw.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtretypepassw.HoverState.Parent = Me.txtretypepassw
-        Me.txtretypepassw.Location = New System.Drawing.Point(98, 224)
+        Me.txtretypepassw.Location = New System.Drawing.Point(98, 247)
         Me.txtretypepassw.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtretypepassw.Name = "txtretypepassw"
         Me.txtretypepassw.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -247,7 +250,7 @@ Partial Class Data_Master_Adminfr_Add
         Me.GunaLabel7.BackColor = System.Drawing.Color.Transparent
         Me.GunaLabel7.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GunaLabel7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.GunaLabel7.Location = New System.Drawing.Point(84, 185)
+        Me.GunaLabel7.Location = New System.Drawing.Point(84, 208)
         Me.GunaLabel7.Name = "GunaLabel7"
         Me.GunaLabel7.Size = New System.Drawing.Size(10, 23)
         Me.GunaLabel7.TabIndex = 11
@@ -260,7 +263,7 @@ Partial Class Data_Master_Adminfr_Add
         Me.GunaLabel8.BackColor = System.Drawing.Color.Transparent
         Me.GunaLabel8.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GunaLabel8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.GunaLabel8.Location = New System.Drawing.Point(84, 224)
+        Me.GunaLabel8.Location = New System.Drawing.Point(84, 247)
         Me.GunaLabel8.Name = "GunaLabel8"
         Me.GunaLabel8.Size = New System.Drawing.Size(10, 23)
         Me.GunaLabel8.TabIndex = 12
@@ -285,7 +288,7 @@ Partial Class Data_Master_Adminfr_Add
         Me.btnConfirmAdd.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
         Me.btnConfirmAdd.HoverState.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnConfirmAdd.HoverState.Parent = Me.btnConfirmAdd
-        Me.btnConfirmAdd.Location = New System.Drawing.Point(26, 284)
+        Me.btnConfirmAdd.Location = New System.Drawing.Point(26, 326)
         Me.btnConfirmAdd.Name = "btnConfirmAdd"
         Me.btnConfirmAdd.ShadowDecoration.BorderRadius = 5
         Me.btnConfirmAdd.ShadowDecoration.Enabled = True
@@ -312,7 +315,7 @@ Partial Class Data_Master_Adminfr_Add
         Me.btnCancelAdd.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
         Me.btnCancelAdd.HoverState.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnCancelAdd.HoverState.Parent = Me.btnCancelAdd
-        Me.btnCancelAdd.Location = New System.Drawing.Point(160, 284)
+        Me.btnCancelAdd.Location = New System.Drawing.Point(160, 326)
         Me.btnCancelAdd.Name = "btnCancelAdd"
         Me.btnCancelAdd.ShadowDecoration.BorderRadius = 5
         Me.btnCancelAdd.ShadowDecoration.Enabled = True
@@ -329,7 +332,7 @@ Partial Class Data_Master_Adminfr_Add
         Me.GunaLabel9.BackColor = System.Drawing.Color.Transparent
         Me.GunaLabel9.Font = New System.Drawing.Font("Roboto Thin", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GunaLabel9.ForeColor = System.Drawing.Color.Silver
-        Me.GunaLabel9.Location = New System.Drawing.Point(106, 342)
+        Me.GunaLabel9.Location = New System.Drawing.Point(106, 384)
         Me.GunaLabel9.Name = "GunaLabel9"
         Me.GunaLabel9.Size = New System.Drawing.Size(81, 15)
         Me.GunaLabel9.TabIndex = 15
@@ -349,7 +352,7 @@ Partial Class Data_Master_Adminfr_Add
         Me.btnshowpass1.HoverState.Parent = Me.btnshowpass1
         Me.btnshowpass1.Image = Global.Library.My.Resources.Resources.eye
         Me.btnshowpass1.ImageSize = New System.Drawing.Size(18, 18)
-        Me.btnshowpass1.Location = New System.Drawing.Point(260, 185)
+        Me.btnshowpass1.Location = New System.Drawing.Point(260, 208)
         Me.btnshowpass1.Name = "btnshowpass1"
         Me.btnshowpass1.PressedDepth = 20
         Me.btnshowpass1.ShadowDecoration.Parent = Me.btnshowpass1
@@ -368,7 +371,7 @@ Partial Class Data_Master_Adminfr_Add
         Me.btnshowpass2.HoverState.Parent = Me.btnshowpass2
         Me.btnshowpass2.Image = Global.Library.My.Resources.Resources.eye
         Me.btnshowpass2.ImageSize = New System.Drawing.Size(18, 18)
-        Me.btnshowpass2.Location = New System.Drawing.Point(260, 224)
+        Me.btnshowpass2.Location = New System.Drawing.Point(260, 247)
         Me.btnshowpass2.Name = "btnshowpass2"
         Me.btnshowpass2.PressedDepth = 20
         Me.btnshowpass2.ShadowDecoration.Parent = Me.btnshowpass2
@@ -433,12 +436,63 @@ Partial Class Data_Master_Adminfr_Add
         Me.GunaLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.GunaLabel11.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SingleBitPerPixelGridFit
         '
+        'GunaLabel12
+        '
+        Me.GunaLabel12.BackColor = System.Drawing.Color.Transparent
+        Me.GunaLabel12.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.GunaLabel12.Location = New System.Drawing.Point(84, 177)
+        Me.GunaLabel12.Name = "GunaLabel12"
+        Me.GunaLabel12.Size = New System.Drawing.Size(10, 23)
+        Me.GunaLabel12.TabIndex = 23
+        Me.GunaLabel12.Text = ":"
+        Me.GunaLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.GunaLabel12.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SingleBitPerPixelGridFit
+        '
+        'GunaLabel13
+        '
+        Me.GunaLabel13.BackColor = System.Drawing.Color.Transparent
+        Me.GunaLabel13.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.GunaLabel13.Location = New System.Drawing.Point(12, 177)
+        Me.GunaLabel13.Name = "GunaLabel13"
+        Me.GunaLabel13.Size = New System.Drawing.Size(69, 23)
+        Me.GunaLabel13.TabIndex = 21
+        Me.GunaLabel13.Text = "Level"
+        Me.GunaLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.GunaLabel13.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SingleBitPerPixelGridFit
+        '
+        'cblevel
+        '
+        Me.cblevel.Animated = True
+        Me.cblevel.BackColor = System.Drawing.Color.Transparent
+        Me.cblevel.BorderRadius = 5
+        Me.cblevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cblevel.FocusedColor = System.Drawing.Color.Empty
+        Me.cblevel.FocusedState.Parent = Me.cblevel
+        Me.cblevel.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cblevel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.cblevel.FormattingEnabled = True
+        Me.cblevel.HoverState.Parent = Me.cblevel
+        Me.cblevel.ItemHeight = 16
+        Me.cblevel.Items.AddRange(New Object() {"Master", "User"})
+        Me.cblevel.ItemsAppearance.Parent = Me.cblevel
+        Me.cblevel.Location = New System.Drawing.Point(100, 176)
+        Me.cblevel.MaxDropDownItems = 2
+        Me.cblevel.Name = "cblevel"
+        Me.cblevel.ShadowDecoration.Parent = Me.cblevel
+        Me.cblevel.Size = New System.Drawing.Size(183, 24)
+        Me.cblevel.TabIndex = 24
+        '
         'Data_Master_Adminfr_Add
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(295, 366)
+        Me.ClientSize = New System.Drawing.Size(295, 408)
+        Me.Controls.Add(Me.cblevel)
+        Me.Controls.Add(Me.GunaLabel12)
+        Me.Controls.Add(Me.GunaLabel13)
         Me.Controls.Add(Me.GunaLabel10)
         Me.Controls.Add(Me.txtidadmin)
         Me.Controls.Add(Me.GunaLabel11)
@@ -492,4 +546,7 @@ Partial Class Data_Master_Adminfr_Add
     Friend WithEvents GunaLabel10 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents txtidadmin As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents GunaLabel11 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents cblevel As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents GunaLabel12 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel13 As Guna.UI.WinForms.GunaLabel
 End Class

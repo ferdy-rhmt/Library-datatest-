@@ -23,9 +23,8 @@ Public Class Data_Master_Anggotafr
         'Database
         cmd = New OleDbCommand("delete * from tbl_anggota where id_anggota like '%" & txtcarinama.Text & "%' ", conn)
         cmd.ExecuteNonQuery()
-        Data_Master.btnDataAnggota.PerformClick()
-        Me.dgvAddAnggota.Refresh()
-        'custMsgBoxx2.Show()
+        MessageBox.Show("Data Berhasil dihapus!")
+        forminpanel(New Data_Master_Anggotafr)
     End Sub
 
     Private Sub Guna2TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtcarinama.TextChanged

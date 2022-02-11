@@ -6,4 +6,8 @@
     Private Sub btnTransaksiPengembalian_Click(sender As Object, e As EventArgs) Handles btnTransaksiPengembalian.Click
         forminpanel(New Transaksi_Pengembalian)
     End Sub
+
+    Private Sub btnHistory_Click(sender As Object, e As EventArgs) Handles btnHistory.Click
+        forminpanel(New Transaksi_History)
+    End Sub
 End Class

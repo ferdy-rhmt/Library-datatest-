@@ -10,6 +10,15 @@
 
 #Region "Menu Button"
     Private Sub btnDataMaster_Click(sender As Object, e As EventArgs) Handles btnDataMaster.Click
+        If lblleveladmin.Text = "Master" Then
+            Data_Master.btnDataAdmin.Enabled = True
+            Data_Master.btnDataAnggota.Enabled = True
+            Data_Master.btnDataBuku.Enabled = True
+        Else
+            Data_Master.btnDataAdmin.Enabled = False
+            Data_Master.btnDataAnggota.Enabled = False
+            Data_Master.btnDataBuku.Enabled = False
+        End If
         Call btnData_Master_cl()
         forminpanel(Data_Master)
     End Sub

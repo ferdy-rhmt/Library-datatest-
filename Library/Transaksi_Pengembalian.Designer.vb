@@ -68,11 +68,6 @@ Partial Class Transaksi_Pengembalian
         Me.btnkembalibuku = New Guna.UI2.WinForms.Guna2TileButton()
         Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
         Me.dgvInputkembali = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.Guna2TileButton2 = New Guna.UI2.WinForms.Guna2TileButton()
-        Me.txtIDBuku = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.txtdenda = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.id_buku = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.judul = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.penerbit = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -81,6 +76,11 @@ Partial Class Transaksi_Pengembalian
         Me.jumlah = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Guna2TileButton2 = New Guna.UI2.WinForms.Guna2TileButton()
+        Me.txtIDBuku = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtdenda = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.GunaGradientPanel1.SuspendLayout()
         CType(Me.dgvsedangpinjam, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvInputkembali, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1012,6 +1012,7 @@ Partial Class Transaksi_Pengembalian
         '
         'dgvInputkembali
         '
+        Me.dgvInputkembali.AllowUserToDeleteRows = False
         DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.dgvInputkembali.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvInputkembali.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
@@ -1032,7 +1033,7 @@ Partial Class Transaksi_Pengembalian
         Me.dgvInputkembali.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_buku, Me.judul, Me.penerbit, Me.Column3, Me.th_terbit, Me.jumlah, Me.Column1, Me.Column2})
         DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(240, Byte), Integer))
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(123, Byte), Integer), CType(CType(207, Byte), Integer))
         DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black
@@ -1044,7 +1045,6 @@ Partial Class Transaksi_Pengembalian
         Me.dgvInputkembali.MultiSelect = False
         Me.dgvInputkembali.Name = "dgvInputkembali"
         Me.dgvInputkembali.ReadOnly = True
-        Me.dgvInputkembali.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle10.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1081,6 +1081,66 @@ Partial Class Transaksi_Pengembalian
         Me.dgvInputkembali.ThemeStyle.RowsStyle.Height = 30
         Me.dgvInputkembali.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(123, Byte), Integer), CType(CType(207, Byte), Integer))
         Me.dgvInputkembali.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
+        '
+        'id_buku
+        '
+        Me.id_buku.FillWeight = 55.0!
+        Me.id_buku.HeaderText = "ID Buku"
+        Me.id_buku.Name = "id_buku"
+        Me.id_buku.ReadOnly = True
+        '
+        'judul
+        '
+        Me.judul.FillWeight = 120.0!
+        Me.judul.HeaderText = "Judul"
+        Me.judul.Name = "judul"
+        Me.judul.ReadOnly = True
+        '
+        'penerbit
+        '
+        Me.penerbit.FillWeight = 60.0!
+        Me.penerbit.HeaderText = "Tanggal Pinjam"
+        Me.penerbit.Name = "penerbit"
+        Me.penerbit.ReadOnly = True
+        '
+        'Column3
+        '
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Column3.DefaultCellStyle = DataGridViewCellStyle7
+        Me.Column3.FillWeight = 40.0!
+        Me.Column3.HeaderText = "Dipinjam"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'th_terbit
+        '
+        Me.th_terbit.FillWeight = 50.0!
+        Me.th_terbit.HeaderText = "ID Pinjam"
+        Me.th_terbit.Name = "th_terbit"
+        Me.th_terbit.ReadOnly = True
+        '
+        'jumlah
+        '
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.jumlah.DefaultCellStyle = DataGridViewCellStyle8
+        Me.jumlah.FillWeight = 50.0!
+        Me.jumlah.HeaderText = "Lama Pinjam"
+        Me.jumlah.Name = "jumlah"
+        Me.jumlah.ReadOnly = True
+        '
+        'Column1
+        '
+        Me.Column1.FillWeight = 40.0!
+        Me.Column1.HeaderText = "Terlambat"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column2
+        '
+        Me.Column2.FillWeight = 40.0!
+        Me.Column2.HeaderText = "Denda"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
         '
         'Guna2TileButton2
         '
@@ -1183,66 +1243,6 @@ Partial Class Transaksi_Pengembalian
         'Guna2Elipse2
         '
         Me.Guna2Elipse2.TargetControl = Me.dgvInputkembali
-        '
-        'id_buku
-        '
-        Me.id_buku.FillWeight = 55.0!
-        Me.id_buku.HeaderText = "ID Buku"
-        Me.id_buku.Name = "id_buku"
-        Me.id_buku.ReadOnly = True
-        '
-        'judul
-        '
-        Me.judul.FillWeight = 120.0!
-        Me.judul.HeaderText = "Judul"
-        Me.judul.Name = "judul"
-        Me.judul.ReadOnly = True
-        '
-        'penerbit
-        '
-        Me.penerbit.FillWeight = 60.0!
-        Me.penerbit.HeaderText = "Tanggal Pinjam"
-        Me.penerbit.Name = "penerbit"
-        Me.penerbit.ReadOnly = True
-        '
-        'Column3
-        '
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Column3.DefaultCellStyle = DataGridViewCellStyle7
-        Me.Column3.FillWeight = 40.0!
-        Me.Column3.HeaderText = "Dipinjam"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'th_terbit
-        '
-        Me.th_terbit.FillWeight = 50.0!
-        Me.th_terbit.HeaderText = "ID Pinjam"
-        Me.th_terbit.Name = "th_terbit"
-        Me.th_terbit.ReadOnly = True
-        '
-        'jumlah
-        '
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.jumlah.DefaultCellStyle = DataGridViewCellStyle8
-        Me.jumlah.FillWeight = 50.0!
-        Me.jumlah.HeaderText = "Lama Pinjam"
-        Me.jumlah.Name = "jumlah"
-        Me.jumlah.ReadOnly = True
-        '
-        'Column1
-        '
-        Me.Column1.FillWeight = 40.0!
-        Me.Column1.HeaderText = "Terlambat"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column2
-        '
-        Me.Column2.FillWeight = 40.0!
-        Me.Column2.HeaderText = "Denda"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
         '
         'Transaksi_Pengembalian
         '

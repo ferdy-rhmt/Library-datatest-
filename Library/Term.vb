@@ -34,7 +34,7 @@ Module Term
         Login_Admin.Guna2ShadowForm1.SetShadowForm(Login_Admin)
         Login_Admin.txtusername.Text = ""
         Login_Admin.txtpassword.Text = ""
-        Login_Admin.txtusername.PlaceholderText = "Username"
+        Login_Admin.txtusername.PlaceholderText = "ID Admin"
         Login_Admin.txtpassword.PlaceholderText = "Password"
     End Sub
     Public Sub LoginAdmin_loadedTR()
@@ -177,27 +177,33 @@ Module Term
             custMsgBoxx.IconMessage.Image = Library.My.Resources.Resources.cancel
             custMsgBoxx.ShowDialog()
         Else
-            If MainForm.Visible = False Then
-                MainForm.lblNamaAdmin.Text = Login_Admin.txtusername.Text
-                MainForm.Refresh()
-                MainForm.Visible = False
-                MainForm.Guna2AnimateWindow1.SetAnimateWindow(MainForm)
-                Login_Admin.Close()
+            Call Koneksi()
+            cmd = New OleDbCommand("select * from tbl_admin where id_admin = '" & Login_Admin.txtusername.Text & "' and pwd = '" & Login_Admin.txtpassword.Text & "'", conn)
+            rd = cmd.ExecuteReader
+            rd.Read()
+            If rd.HasRows = True Then
+                If MainForm.Visible = False Then
+                    MainForm.lblidadmin.Text = rd("id_admin")
+                    MainForm.lblNamaAdmin.Text = rd("nama_admin")
+                    MainForm.lblleveladmin.Text = rd("level_admin")
+                    MainForm.Refresh()
+                    MainForm.Visible = False
+                    MainForm.Guna2AnimateWindow1.SetAnimateWindow(MainForm)
+                    Login_Admin.Close()
+                Else
+                    MainForm.lblNamaAdmin.Text = Login_Admin.txtusername.Text
+                    MainForm.lblleveladmin.Text = rd("level_admin")
+                    MainForm.Refresh()
+                    Login_Admin.Close()
+                End If
             Else
-                MainForm.lblNamaAdmin.Text = Login_Admin.txtusername.Text
-                MainForm.Refresh()
-                Login_Admin.Close()
+                MessageBox.Show("Cek ID Admin dan Password anda," & vbNewLine & "Pastikan benar dan sudah terdaftar!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Login_Admin.txtpassword.Text = ""
             End If
         End If
     End Sub
     Public Sub cancel_login_term()
-        If Not MainForm.lblNamaAdmin.Text = "" Then
-            Login_Admin.Close()
-        Else
-            custMsgBoxx.lblMessage.Text = "You aren't Logged in.
-Please Login First!"
-            custMsgBoxx.IconMessage.Image = Library.My.Resources.Resources.info1
-            custMsgBoxx.ShowDialog()
-        End If
+        Login_Admin.Close()
+        MainForm.Close()
     End Sub
 End Module

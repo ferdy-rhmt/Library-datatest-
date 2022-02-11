@@ -27,12 +27,10 @@ Public Class Data_Master_Bukufr
             If MessageBox.Show("Yakin ingin menghapus data " + lblid.Text + " ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                 cmd = New OleDbCommand("delete * from tbl_buku where id_buku like '%" & lblid.Text & "%' ", conn)
                 cmd.ExecuteNonQuery()
-                Data_Master.btnDataBuku.PerformClick()
-                Me.dgvDaftarBuku.Refresh()
+                forminpanel(New Data_Master_Bukufr)
+                MessageBox.Show("Data telah dihapus!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
             End If
-        Else
-            MessageBox.Show("Data telah dihapus!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
 

@@ -33,8 +33,9 @@ Partial Class Data_Master_Adminfr
         Me.id_admin = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Name_Admin = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pwd = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GunaGradientPanel1 = New Guna.UI.WinForms.GunaGradientPanel()
+        Me.lblidadmin = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
         Me.btnDelAdmin = New Guna.UI2.WinForms.Guna2TileButton()
         Me.btnAddAdmin = New Guna.UI2.WinForms.Guna2TileButton()
@@ -49,7 +50,6 @@ Partial Class Data_Master_Adminfr
         '
         'dgvAddAdmin
         '
-        Me.dgvAddAdmin.AllowUserToAddRows = False
         Me.dgvAddAdmin.AllowUserToDeleteRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.dgvAddAdmin.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
@@ -138,12 +138,11 @@ Partial Class Data_Master_Adminfr
         '
         'Column1
         '
-        Me.Column1.FillWeight = 30.0!
-        Me.Column1.HeaderText = "*"
+        Me.Column1.FillWeight = 50.0!
+        Me.Column1.HeaderText = "Level"
         Me.Column1.Name = "Column1"
         Me.Column1.ReadOnly = True
         Me.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
         'GunaGradientPanel1
         '
@@ -152,6 +151,7 @@ Partial Class Data_Master_Adminfr
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GunaGradientPanel1.BackgroundImage = CType(resources.GetObject("GunaGradientPanel1.BackgroundImage"), System.Drawing.Image)
         Me.GunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GunaGradientPanel1.Controls.Add(Me.lblidadmin)
         Me.GunaGradientPanel1.Controls.Add(Me.dgvAddAdmin)
         Me.GunaGradientPanel1.Controls.Add(Me.GunaLabel2)
         Me.GunaGradientPanel1.Controls.Add(Me.btnDelAdmin)
@@ -166,6 +166,22 @@ Partial Class Data_Master_Adminfr
         Me.GunaGradientPanel1.Size = New System.Drawing.Size(680, 455)
         Me.GunaGradientPanel1.TabIndex = 2
         Me.GunaGradientPanel1.Text = "GunaGradientPanel1"
+        '
+        'lblidadmin
+        '
+        Me.lblidadmin.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblidadmin.AutoEllipsis = True
+        Me.lblidadmin.AutoSize = True
+        Me.lblidadmin.BackColor = System.Drawing.Color.Transparent
+        Me.lblidadmin.Font = New System.Drawing.Font("Roboto Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblidadmin.ForeColor = System.Drawing.Color.Gray
+        Me.lblidadmin.Location = New System.Drawing.Point(664, 440)
+        Me.lblidadmin.Name = "lblidadmin"
+        Me.lblidadmin.Size = New System.Drawing.Size(13, 15)
+        Me.lblidadmin.TabIndex = 14
+        Me.lblidadmin.Text = "_"
+        Me.lblidadmin.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lblidadmin.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SingleBitPerPixelGridFit
         '
         'GunaLabel2
         '
@@ -292,8 +308,9 @@ Partial Class Data_Master_Adminfr
     Friend WithEvents btnAddAdmin As Guna.UI2.WinForms.Guna2TileButton
     Friend WithEvents GunaLabel2 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents Guna2TileButton1 As Guna.UI2.WinForms.Guna2TileButton
+    Friend WithEvents lblidadmin As Guna.UI.WinForms.GunaLabel
     Friend WithEvents id_admin As DataGridViewTextBoxColumn
     Friend WithEvents Name_Admin As DataGridViewTextBoxColumn
     Friend WithEvents pwd As DataGridViewTextBoxColumn
-    Friend WithEvents Column1 As DataGridViewCheckBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
 End Class

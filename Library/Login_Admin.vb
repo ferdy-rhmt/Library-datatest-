@@ -9,6 +9,7 @@
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Call Koneksi()
+        Call KondisiAwal_Mainform()
         Call Login_term()
     End Sub
 

@@ -126,6 +126,12 @@
     <Compile Include="Data_Master_Adminfr.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Lainnya_Ubahpass.Designer.vb">
+      <DependentUpon>Lainnya_Ubahpass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Lainnya_Ubahpass.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Lainnya_Pengaturan.Designer.vb">
       <DependentUpon>Lainnya_Pengaturan.vb</DependentUpon>
     </Compile>
@@ -190,6 +196,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -206,6 +213,12 @@
       <DependentUpon>Transaksi.vb</DependentUpon>
     </Compile>
     <Compile Include="Transaksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi_History.Designer.vb">
+      <DependentUpon>Transaksi_History.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi_History.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Transaksi_Pengembalian.Designer.vb">
@@ -239,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Data_Master_Adminfr.resx">
       <DependentUpon>Data_Master_Adminfr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lainnya_Ubahpass.resx">
+      <DependentUpon>Lainnya_Ubahpass.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lainnya_Pengaturan.resx">
       <DependentUpon>Lainnya_Pengaturan.vb</DependentUpon>
@@ -277,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Transaksi.resx">
       <DependentUpon>Transaksi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi_History.resx">
+      <DependentUpon>Transaksi_History.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaksi_Pengembalian.resx">
       <DependentUpon>Transaksi_Pengembalian.vb</DependentUpon>
@@ -349,6 +368,8 @@
     <None Include="Resources\delete_rak1.png" />
     <None Include="Resources\settings.png" />
     <None Include="Resources\settings %281%29.png" />
+    <None Include="Resources\file.png" />
+    <None Include="Resources\file %281%29.png" />
     <Content Include="Taskbar_Icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

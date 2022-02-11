@@ -10,12 +10,7 @@ Public Class Transaksi_Pengembalian
         txtterlambat.Clear()
         txtdenda.Clear()
         txttotaldenda.Clear()
-        dgvInputkembali.Rows.Clear()
         txtIDBuku.Focus()
-        txttotaldenda.Text = "0"
-        If txtidagt.Text = "" Then
-            dgvsedangpinjam.DataSource = ""
-        End If
     End Sub
     Sub bersih_anggota()
         txtidagt.Clear()
@@ -111,7 +106,7 @@ Public Class Transaksi_Pengembalian
 
     Private Sub txtIDBuku_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtIDBuku.KeyPress
         If e.KeyChar = Chr(13) Then
-            cmd = New OleDbCommand("select * from qry_pinjam where id_anggota = '" & txtidagt.Text & "' and id_buku='" & txtIDBuku.Text & "'", conn)
+            cmd = New OleDbCommand("select * from qry_pinjam where id_anggota = '" & txtidagt.Text & "' and id_buku='" & txtIDBuku.Text & "' and keterangan = 'Dipinjam'", conn)
             rd = cmd.ExecuteReader
             rd.Read()
             If rd.HasRows = True Then
@@ -220,9 +215,19 @@ Public Class Transaksi_Pengembalian
                 Dim tambahstok As String = "update tbl_buku set stok = '" & rd.Item("stok") + dgvInputkembali.Rows(baris).Cells(3).Value & "' where id_buku = '" & dgvInputkembali.Rows(baris).Cells(0).Value & "'"
                 cmd = New OleDbCommand(tambahstok, conn)
                 cmd.ExecuteNonQuery()
+
+                'ubah status dipinjam jadi dikembalikan
+                cmd = New OleDbCommand("select * from tbl_pinjam_detail where id_buku = '" & dgvInputkembali.Rows(baris).Cells(0).Value & "' and id_pinjam = '" & dgvInputkembali.Rows(baris).Cells(4).Value & "'", conn)
+                rd = cmd.ExecuteReader
+                rd.Read()
+                If rd.HasRows Then
+                    cmd = New OleDbCommand("update tbl_pinjam_detail set keterangan = 'Dikembalikan' where id_buku = '" & dgvInputkembali.Rows(baris).Cells(0).Value & "' and id_pinjam = '" & dgvInputkembali.Rows(baris).Cells(4).Value & "'", conn)
+                    cmd.ExecuteNonQuery()
+                End If
             Next
 
             MessageBox.Show("Pengembalian Berhasil disimpan !", "Berhasil!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            dgvInputkembali.Rows.Clear()
             Call bersih_transaksi()
             Call bersih_anggota()
             Call nomoroto()
