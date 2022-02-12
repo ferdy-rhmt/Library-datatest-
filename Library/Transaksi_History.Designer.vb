@@ -31,17 +31,10 @@ Partial Class Transaksi_History
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GunaGradientPanel1 = New Guna.UI.WinForms.GunaGradientPanel()
-        Me.dgvhistory = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.Guna2TileButton2 = New Guna.UI2.WinForms.Guna2TileButton()
-        Me.lbljenis = New Guna.UI.WinForms.GunaLabel()
-        Me.txtcari = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.txttotal = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
-        Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.txt_keterangan = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
+        Me.txt_keterangan = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.dgvhistory = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.idpinjam_idkembali = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.penerbit = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.jumlah = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -49,6 +42,13 @@ Partial Class Transaksi_History
         Me.id_buku = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.judul = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pinjam_kembali = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Guna2TileButton2 = New Guna.UI2.WinForms.Guna2TileButton()
+        Me.lbljenis = New Guna.UI.WinForms.GunaLabel()
+        Me.txtcari = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txttotal = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
+        Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.GunaGradientPanel1.SuspendLayout()
         CType(Me.dgvhistory, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -77,6 +77,63 @@ Partial Class Transaksi_History
         Me.GunaGradientPanel1.TabIndex = 8
         Me.GunaGradientPanel1.TabStop = False
         Me.GunaGradientPanel1.Text = "GunaGradientPanel1"
+        '
+        'GunaLabel3
+        '
+        Me.GunaLabel3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GunaLabel3.AutoEllipsis = True
+        Me.GunaLabel3.AutoSize = True
+        Me.GunaLabel3.BackColor = System.Drawing.Color.Transparent
+        Me.GunaLabel3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.GunaLabel3.Location = New System.Drawing.Point(256, 72)
+        Me.GunaLabel3.Name = "GunaLabel3"
+        Me.GunaLabel3.Size = New System.Drawing.Size(79, 17)
+        Me.GunaLabel3.TabIndex = 59
+        Me.GunaLabel3.Text = "Cari Riwayat"
+        Me.GunaLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.GunaLabel3.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SingleBitPerPixelGridFit
+        '
+        'GunaLabel1
+        '
+        Me.GunaLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GunaLabel1.AutoEllipsis = True
+        Me.GunaLabel1.AutoSize = True
+        Me.GunaLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.GunaLabel1.Location = New System.Drawing.Point(12, 72)
+        Me.GunaLabel1.Name = "GunaLabel1"
+        Me.GunaLabel1.Size = New System.Drawing.Size(124, 17)
+        Me.GunaLabel1.TabIndex = 58
+        Me.GunaLabel1.Text = "Cari Nama Anggota"
+        Me.GunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.GunaLabel1.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SingleBitPerPixelGridFit
+        '
+        'txt_keterangan
+        '
+        Me.txt_keterangan.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.txt_keterangan.Animated = True
+        Me.txt_keterangan.BackColor = System.Drawing.Color.Transparent
+        Me.txt_keterangan.BorderRadius = 5
+        Me.txt_keterangan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.txt_keterangan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.txt_keterangan.FillColor = System.Drawing.Color.WhiteSmoke
+        Me.txt_keterangan.FocusedColor = System.Drawing.Color.Empty
+        Me.txt_keterangan.FocusedState.Parent = Me.txt_keterangan
+        Me.txt_keterangan.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_keterangan.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.txt_keterangan.FormattingEnabled = True
+        Me.txt_keterangan.HoverState.Parent = Me.txt_keterangan
+        Me.txt_keterangan.ItemHeight = 30
+        Me.txt_keterangan.Items.AddRange(New Object() {"Peminjaman", "Pengembalian"})
+        Me.txt_keterangan.ItemsAppearance.Parent = Me.txt_keterangan
+        Me.txt_keterangan.Location = New System.Drawing.Point(252, 93)
+        Me.txt_keterangan.Name = "txt_keterangan"
+        Me.txt_keterangan.ShadowDecoration.Parent = Me.txt_keterangan
+        Me.txt_keterangan.Size = New System.Drawing.Size(165, 36)
+        Me.txt_keterangan.StartIndex = 0
+        Me.txt_keterangan.TabIndex = 57
         '
         'dgvhistory
         '
@@ -150,6 +207,59 @@ Partial Class Transaksi_History
         Me.dgvhistory.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(123, Byte), Integer), CType(CType(207, Byte), Integer))
         Me.dgvhistory.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
         '
+        'idpinjam_idkembali
+        '
+        Me.idpinjam_idkembali.FillWeight = 50.0!
+        Me.idpinjam_idkembali.HeaderText = "ID Pinjam"
+        Me.idpinjam_idkembali.Name = "idpinjam_idkembali"
+        Me.idpinjam_idkembali.ReadOnly = True
+        '
+        'penerbit
+        '
+        Me.penerbit.FillWeight = 50.0!
+        Me.penerbit.HeaderText = "Tanggal Pinjam"
+        Me.penerbit.Name = "penerbit"
+        Me.penerbit.ReadOnly = True
+        '
+        'jumlah
+        '
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.jumlah.DefaultCellStyle = DataGridViewCellStyle3
+        Me.jumlah.FillWeight = 40.0!
+        Me.jumlah.HeaderText = "ID Anggota"
+        Me.jumlah.Name = "jumlah"
+        Me.jumlah.ReadOnly = True
+        '
+        'Column1
+        '
+        Me.Column1.FillWeight = 90.0!
+        Me.Column1.HeaderText = "Nama Anggota"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'id_buku
+        '
+        Me.id_buku.FillWeight = 40.0!
+        Me.id_buku.HeaderText = "ID Buku"
+        Me.id_buku.Name = "id_buku"
+        Me.id_buku.ReadOnly = True
+        '
+        'judul
+        '
+        Me.judul.FillWeight = 110.0!
+        Me.judul.HeaderText = "Judul"
+        Me.judul.Name = "judul"
+        Me.judul.ReadOnly = True
+        '
+        'pinjam_kembali
+        '
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.pinjam_kembali.DefaultCellStyle = DataGridViewCellStyle4
+        Me.pinjam_kembali.FillWeight = 30.0!
+        Me.pinjam_kembali.HeaderText = "Dipinjam"
+        Me.pinjam_kembali.Name = "pinjam_kembali"
+        Me.pinjam_kembali.ReadOnly = True
+        '
         'Guna2TileButton2
         '
         Me.Guna2TileButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
@@ -180,7 +290,7 @@ Partial Class Transaksi_History
         '
         'lbljenis
         '
-        Me.lbljenis.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.lbljenis.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lbljenis.AutoEllipsis = True
         Me.lbljenis.AutoSize = True
         Me.lbljenis.BackColor = System.Drawing.Color.Transparent
@@ -215,7 +325,7 @@ Partial Class Transaksi_History
         Me.txtcari.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtcari.HoverState.Parent = Me.txtcari
         Me.txtcari.Location = New System.Drawing.Point(12, 93)
-        Me.txtcari.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtcari.Margin = New System.Windows.Forms.Padding(4)
         Me.txtcari.Name = "txtcari"
         Me.txtcari.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtcari.PlaceholderForeColor = System.Drawing.Color.Black
@@ -276,116 +386,6 @@ Partial Class Transaksi_History
         Me.GunaLabel2.TabIndex = 11
         Me.GunaLabel2.Text = " - Riwayat Peminjaman/Pengembalian"
         Me.GunaLabel2.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SingleBitPerPixelGridFit
-        '
-        'txt_keterangan
-        '
-        Me.txt_keterangan.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txt_keterangan.Animated = True
-        Me.txt_keterangan.BackColor = System.Drawing.Color.Transparent
-        Me.txt_keterangan.BorderRadius = 5
-        Me.txt_keterangan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.txt_keterangan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.txt_keterangan.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.txt_keterangan.FocusedColor = System.Drawing.Color.Empty
-        Me.txt_keterangan.FocusedState.Parent = Me.txt_keterangan
-        Me.txt_keterangan.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_keterangan.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.txt_keterangan.FormattingEnabled = True
-        Me.txt_keterangan.HoverState.Parent = Me.txt_keterangan
-        Me.txt_keterangan.ItemHeight = 30
-        Me.txt_keterangan.Items.AddRange(New Object() {"Peminjaman", "Pengembalian"})
-        Me.txt_keterangan.ItemsAppearance.Parent = Me.txt_keterangan
-        Me.txt_keterangan.Location = New System.Drawing.Point(252, 93)
-        Me.txt_keterangan.Name = "txt_keterangan"
-        Me.txt_keterangan.ShadowDecoration.Parent = Me.txt_keterangan
-        Me.txt_keterangan.Size = New System.Drawing.Size(165, 36)
-        Me.txt_keterangan.StartIndex = 0
-        Me.txt_keterangan.TabIndex = 57
-        '
-        'GunaLabel1
-        '
-        Me.GunaLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.GunaLabel1.AutoEllipsis = True
-        Me.GunaLabel1.AutoSize = True
-        Me.GunaLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.GunaLabel1.Location = New System.Drawing.Point(12, 72)
-        Me.GunaLabel1.Name = "GunaLabel1"
-        Me.GunaLabel1.Size = New System.Drawing.Size(124, 17)
-        Me.GunaLabel1.TabIndex = 58
-        Me.GunaLabel1.Text = "Cari Nama Anggota"
-        Me.GunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.GunaLabel1.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SingleBitPerPixelGridFit
-        '
-        'GunaLabel3
-        '
-        Me.GunaLabel3.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.GunaLabel3.AutoEllipsis = True
-        Me.GunaLabel3.AutoSize = True
-        Me.GunaLabel3.BackColor = System.Drawing.Color.Transparent
-        Me.GunaLabel3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.GunaLabel3.Location = New System.Drawing.Point(256, 72)
-        Me.GunaLabel3.Name = "GunaLabel3"
-        Me.GunaLabel3.Size = New System.Drawing.Size(79, 17)
-        Me.GunaLabel3.TabIndex = 59
-        Me.GunaLabel3.Text = "Cari Riwayat"
-        Me.GunaLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.GunaLabel3.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SingleBitPerPixelGridFit
-        '
-        'idpinjam_idkembali
-        '
-        Me.idpinjam_idkembali.FillWeight = 50.0!
-        Me.idpinjam_idkembali.HeaderText = "ID Pinjam"
-        Me.idpinjam_idkembali.Name = "idpinjam_idkembali"
-        Me.idpinjam_idkembali.ReadOnly = True
-        '
-        'penerbit
-        '
-        Me.penerbit.FillWeight = 50.0!
-        Me.penerbit.HeaderText = "Tanggal Pinjam"
-        Me.penerbit.Name = "penerbit"
-        Me.penerbit.ReadOnly = True
-        '
-        'jumlah
-        '
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.jumlah.DefaultCellStyle = DataGridViewCellStyle3
-        Me.jumlah.FillWeight = 40.0!
-        Me.jumlah.HeaderText = "ID Anggota"
-        Me.jumlah.Name = "jumlah"
-        Me.jumlah.ReadOnly = True
-        '
-        'Column1
-        '
-        Me.Column1.FillWeight = 90.0!
-        Me.Column1.HeaderText = "Nama Anggota"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'id_buku
-        '
-        Me.id_buku.FillWeight = 40.0!
-        Me.id_buku.HeaderText = "ID Buku"
-        Me.id_buku.Name = "id_buku"
-        Me.id_buku.ReadOnly = True
-        '
-        'judul
-        '
-        Me.judul.FillWeight = 110.0!
-        Me.judul.HeaderText = "Judul"
-        Me.judul.Name = "judul"
-        Me.judul.ReadOnly = True
-        '
-        'pinjam_kembali
-        '
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.pinjam_kembali.DefaultCellStyle = DataGridViewCellStyle4
-        Me.pinjam_kembali.FillWeight = 30.0!
-        Me.pinjam_kembali.HeaderText = "Dipinjam"
-        Me.pinjam_kembali.Name = "pinjam_kembali"
-        Me.pinjam_kembali.ReadOnly = True
         '
         'Transaksi_History
         '

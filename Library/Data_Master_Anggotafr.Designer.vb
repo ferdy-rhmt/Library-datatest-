@@ -169,6 +169,7 @@ Partial Class Data_Master_Anggotafr
         '
         'txtcarinama
         '
+        Me.txtcarinama.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.txtcarinama.BorderRadius = 6
         Me.txtcarinama.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtcarinama.DefaultText = ""

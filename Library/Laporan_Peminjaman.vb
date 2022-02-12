@@ -1,14 +1,22 @@
-﻿Imports System.Data.OleDb
-Public Class laporan_peminjaman
+﻿Public Class laporan_peminjaman
     Private Sub laporan_peminjaman_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MunculData()
+
     End Sub
 
-    Private Sub MunculData()
-        Call Koneksi()
-        da = New OleDbDataAdapter("Select Kode,Nama_Buku,Nama_Siswa,Kelas_Siswa,Lama_Pinjam,Tanggal from tbl_bukudipinjam", conn)
-        ds = New DataSet
-        da.Fill(ds, "tbl_bukudipinjam")
-        dgvDaftarPinjaman.DataSource = ds.Tables("tbl_bukudipinjam")
+
+    Private Sub btnPinjamBuku_Click(sender As Object, e As EventArgs) Handles btnPinjamBuku.Click
+        If cbjenis.SelectedIndex = 0 Then
+            Laporan_Peminjaman_Hari.ShowDialog()
+        ElseIf cbjenis.SelectedIndex = 1 Then
+
+        ElseIf cbjenis.SelectedIndex = 2 Then
+
+        Else
+            MessageBox.Show("Data Tidak Ada!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
+
+    Private Sub btnexport_Click(sender As Object, e As EventArgs) Handles btnexport.Click
+        CrystalReportViewer1.ExportReport()
     End Sub
 End Class

@@ -523,6 +523,7 @@ Partial Class Transaksi_Pengembalian
         '
         'btnaddkembali
         '
+        Me.btnaddkembali.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.btnaddkembali.Animated = True
         Me.btnaddkembali.AutoRoundedCorners = True
         Me.btnaddkembali.BorderRadius = 12

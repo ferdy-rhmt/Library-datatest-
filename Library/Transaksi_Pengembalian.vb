@@ -176,6 +176,7 @@ Public Class Transaksi_Pengembalian
                         If dgvInputkembali.Rows(barisbawah).Cells(0).Value = dgvInputkembali.Rows(barisatas).Cells(0).Value Then
                             MessageBox.Show("Buku sudah dalam proses pengembalian !", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error)
                             dgvInputkembali.Rows.RemoveAt(barisbawah)
+
                             Exit Sub
                         End If
                     Next

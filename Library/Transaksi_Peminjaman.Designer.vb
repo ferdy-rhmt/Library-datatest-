@@ -33,6 +33,10 @@ Partial Class Transaksi_Peminjaman
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GunaGradientPanel1 = New Guna.UI.WinForms.GunaGradientPanel()
+        Me.GunaLabel11 = New Guna.UI.WinForms.GunaLabel()
+        Me.txtjurusansis = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.GunaLabel10 = New Guna.UI.WinForms.GunaLabel()
+        Me.txtkelassis = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtpjmsekarang = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtnamabuku = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txttahunterbit = New Guna.UI2.WinForms.Guna2TextBox()
@@ -67,10 +71,6 @@ Partial Class Transaksi_Peminjaman
         Me.txtjmlpinjam = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.GunaLabel10 = New Guna.UI.WinForms.GunaLabel()
-        Me.txtkelassis = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.GunaLabel11 = New Guna.UI.WinForms.GunaLabel()
-        Me.txtjurusansis = New Guna.UI2.WinForms.Guna2TextBox()
         Me.GunaGradientPanel1.SuspendLayout()
         CType(Me.dgvsedangpinjam, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvInputPinjaman, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -122,6 +122,104 @@ Partial Class Transaksi_Peminjaman
         Me.GunaGradientPanel1.TabIndex = 8
         Me.GunaGradientPanel1.TabStop = False
         Me.GunaGradientPanel1.Text = "GunaGradientPanel1"
+        '
+        'GunaLabel11
+        '
+        Me.GunaLabel11.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GunaLabel11.AutoEllipsis = True
+        Me.GunaLabel11.BackColor = System.Drawing.Color.Transparent
+        Me.GunaLabel11.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.GunaLabel11.Location = New System.Drawing.Point(576, 78)
+        Me.GunaLabel11.Name = "GunaLabel11"
+        Me.GunaLabel11.Size = New System.Drawing.Size(54, 23)
+        Me.GunaLabel11.TabIndex = 54
+        Me.GunaLabel11.Text = "Jurusan"
+        Me.GunaLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.GunaLabel11.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SingleBitPerPixelGridFit
+        '
+        'txtjurusansis
+        '
+        Me.txtjurusansis.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.txtjurusansis.Animated = True
+        Me.txtjurusansis.BackColor = System.Drawing.Color.Transparent
+        Me.txtjurusansis.BorderRadius = 6
+        Me.txtjurusansis.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtjurusansis.DefaultText = ""
+        Me.txtjurusansis.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtjurusansis.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtjurusansis.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtjurusansis.DisabledState.Parent = Me.txtjurusansis
+        Me.txtjurusansis.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtjurusansis.FillColor = System.Drawing.Color.WhiteSmoke
+        Me.txtjurusansis.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtjurusansis.FocusedState.Parent = Me.txtjurusansis
+        Me.txtjurusansis.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtjurusansis.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.txtjurusansis.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtjurusansis.HoverState.Parent = Me.txtjurusansis
+        Me.txtjurusansis.Location = New System.Drawing.Point(637, 78)
+        Me.txtjurusansis.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtjurusansis.Name = "txtjurusansis"
+        Me.txtjurusansis.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtjurusansis.PlaceholderForeColor = System.Drawing.Color.Black
+        Me.txtjurusansis.PlaceholderText = ""
+        Me.txtjurusansis.ReadOnly = True
+        Me.txtjurusansis.SelectedText = ""
+        Me.txtjurusansis.ShadowDecoration.Enabled = True
+        Me.txtjurusansis.ShadowDecoration.Parent = Me.txtjurusansis
+        Me.txtjurusansis.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(5, 0, 0, 5)
+        Me.txtjurusansis.Size = New System.Drawing.Size(90, 23)
+        Me.txtjurusansis.TabIndex = 53
+        '
+        'GunaLabel10
+        '
+        Me.GunaLabel10.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GunaLabel10.AutoEllipsis = True
+        Me.GunaLabel10.BackColor = System.Drawing.Color.Transparent
+        Me.GunaLabel10.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.GunaLabel10.Location = New System.Drawing.Point(579, 47)
+        Me.GunaLabel10.Name = "GunaLabel10"
+        Me.GunaLabel10.Size = New System.Drawing.Size(51, 23)
+        Me.GunaLabel10.TabIndex = 52
+        Me.GunaLabel10.Text = "Kelas"
+        Me.GunaLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.GunaLabel10.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SingleBitPerPixelGridFit
+        '
+        'txtkelassis
+        '
+        Me.txtkelassis.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.txtkelassis.Animated = True
+        Me.txtkelassis.BackColor = System.Drawing.Color.Transparent
+        Me.txtkelassis.BorderRadius = 6
+        Me.txtkelassis.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtkelassis.DefaultText = ""
+        Me.txtkelassis.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtkelassis.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtkelassis.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtkelassis.DisabledState.Parent = Me.txtkelassis
+        Me.txtkelassis.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtkelassis.FillColor = System.Drawing.Color.WhiteSmoke
+        Me.txtkelassis.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtkelassis.FocusedState.Parent = Me.txtkelassis
+        Me.txtkelassis.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtkelassis.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.txtkelassis.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtkelassis.HoverState.Parent = Me.txtkelassis
+        Me.txtkelassis.Location = New System.Drawing.Point(637, 47)
+        Me.txtkelassis.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtkelassis.Name = "txtkelassis"
+        Me.txtkelassis.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtkelassis.PlaceholderForeColor = System.Drawing.Color.Black
+        Me.txtkelassis.PlaceholderText = ""
+        Me.txtkelassis.ReadOnly = True
+        Me.txtkelassis.SelectedText = ""
+        Me.txtkelassis.ShadowDecoration.Enabled = True
+        Me.txtkelassis.ShadowDecoration.Parent = Me.txtkelassis
+        Me.txtkelassis.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(5, 0, 0, 5)
+        Me.txtkelassis.Size = New System.Drawing.Size(90, 23)
+        Me.txtkelassis.TabIndex = 51
         '
         'txtpjmsekarang
         '
@@ -968,104 +1066,6 @@ Partial Class Transaksi_Peminjaman
         'Guna2Elipse2
         '
         Me.Guna2Elipse2.TargetControl = Me.dgvInputPinjaman
-        '
-        'GunaLabel10
-        '
-        Me.GunaLabel10.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.GunaLabel10.AutoEllipsis = True
-        Me.GunaLabel10.BackColor = System.Drawing.Color.Transparent
-        Me.GunaLabel10.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.GunaLabel10.Location = New System.Drawing.Point(579, 47)
-        Me.GunaLabel10.Name = "GunaLabel10"
-        Me.GunaLabel10.Size = New System.Drawing.Size(51, 23)
-        Me.GunaLabel10.TabIndex = 52
-        Me.GunaLabel10.Text = "Kelas"
-        Me.GunaLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.GunaLabel10.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SingleBitPerPixelGridFit
-        '
-        'txtkelassis
-        '
-        Me.txtkelassis.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtkelassis.Animated = True
-        Me.txtkelassis.BackColor = System.Drawing.Color.Transparent
-        Me.txtkelassis.BorderRadius = 6
-        Me.txtkelassis.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtkelassis.DefaultText = ""
-        Me.txtkelassis.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtkelassis.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtkelassis.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtkelassis.DisabledState.Parent = Me.txtkelassis
-        Me.txtkelassis.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtkelassis.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.txtkelassis.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtkelassis.FocusedState.Parent = Me.txtkelassis
-        Me.txtkelassis.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtkelassis.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.txtkelassis.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtkelassis.HoverState.Parent = Me.txtkelassis
-        Me.txtkelassis.Location = New System.Drawing.Point(637, 47)
-        Me.txtkelassis.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.txtkelassis.Name = "txtkelassis"
-        Me.txtkelassis.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtkelassis.PlaceholderForeColor = System.Drawing.Color.Black
-        Me.txtkelassis.PlaceholderText = ""
-        Me.txtkelassis.ReadOnly = True
-        Me.txtkelassis.SelectedText = ""
-        Me.txtkelassis.ShadowDecoration.Enabled = True
-        Me.txtkelassis.ShadowDecoration.Parent = Me.txtkelassis
-        Me.txtkelassis.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(5, 0, 0, 5)
-        Me.txtkelassis.Size = New System.Drawing.Size(90, 23)
-        Me.txtkelassis.TabIndex = 51
-        '
-        'GunaLabel11
-        '
-        Me.GunaLabel11.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.GunaLabel11.AutoEllipsis = True
-        Me.GunaLabel11.BackColor = System.Drawing.Color.Transparent
-        Me.GunaLabel11.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.GunaLabel11.Location = New System.Drawing.Point(576, 78)
-        Me.GunaLabel11.Name = "GunaLabel11"
-        Me.GunaLabel11.Size = New System.Drawing.Size(54, 23)
-        Me.GunaLabel11.TabIndex = 54
-        Me.GunaLabel11.Text = "Jurusan"
-        Me.GunaLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.GunaLabel11.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SingleBitPerPixelGridFit
-        '
-        'txtjurusansis
-        '
-        Me.txtjurusansis.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtjurusansis.Animated = True
-        Me.txtjurusansis.BackColor = System.Drawing.Color.Transparent
-        Me.txtjurusansis.BorderRadius = 6
-        Me.txtjurusansis.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtjurusansis.DefaultText = ""
-        Me.txtjurusansis.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtjurusansis.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtjurusansis.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtjurusansis.DisabledState.Parent = Me.txtjurusansis
-        Me.txtjurusansis.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtjurusansis.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.txtjurusansis.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtjurusansis.FocusedState.Parent = Me.txtjurusansis
-        Me.txtjurusansis.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtjurusansis.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
-        Me.txtjurusansis.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtjurusansis.HoverState.Parent = Me.txtjurusansis
-        Me.txtjurusansis.Location = New System.Drawing.Point(637, 78)
-        Me.txtjurusansis.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.txtjurusansis.Name = "txtjurusansis"
-        Me.txtjurusansis.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtjurusansis.PlaceholderForeColor = System.Drawing.Color.Black
-        Me.txtjurusansis.PlaceholderText = ""
-        Me.txtjurusansis.ReadOnly = True
-        Me.txtjurusansis.SelectedText = ""
-        Me.txtjurusansis.ShadowDecoration.Enabled = True
-        Me.txtjurusansis.ShadowDecoration.Parent = Me.txtjurusansis
-        Me.txtjurusansis.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(5, 0, 0, 5)
-        Me.txtjurusansis.Size = New System.Drawing.Size(90, 23)
-        Me.txtjurusansis.TabIndex = 53
         '
         'Transaksi_Peminjaman
         '

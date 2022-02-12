@@ -71,7 +71,7 @@ Public Class Transaksi_Peminjaman
 
         For baris As Integer = 0 To dgvInputPinjaman.RowCount - 2
             'save ke database tbl_pinjam_detail
-            cmd = New OleDbCommand("insert into tbl_pinjam_detail values('" & txtidpinjam.Text & "', '" & dgvInputPinjaman.Rows(baris).Cells(0).Value & "', 'Dipinjam', '" & dgvInputPinjaman.Rows(baris).Cells(4).Value & "')", conn)
+            cmd = New OleDbCommand("insert into tbl_pinjam_detail values('" & txtidpinjam.Text & "', '" & dgvInputPinjaman.Rows(baris).Cells(0).Value & "', 'Dipinjam', '" & dgvInputPinjaman.Rows(baris).Cells(4).Value & "', '" & MainForm.lblNamaAdmin.Text & "')", conn)
             cmd.ExecuteNonQuery()
 
             'pengurangan nilai stok

@@ -24,20 +24,20 @@ Partial Class laporan_peminjaman
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(laporan_peminjaman))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GunaGradientPanel1 = New Guna.UI.WinForms.GunaGradientPanel()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.txtsearchbar = New Bunifu.Framework.UI.BunifuTextbox()
+        Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
+        Me.cbjenis = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.btnexport = New Guna.UI2.WinForms.Guna2TileButton()
+        Me.btnPinjamBuku = New Guna.UI2.WinForms.Guna2TileButton()
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
-        Me.dgvDaftarPinjaman = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Guna2TileButton2 = New Guna.UI2.WinForms.Guna2TileButton()
+        Me.lap_pinjam1 = New Library.lap_pinjam()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.GunaGradientPanel1.SuspendLayout()
         Me.Guna2Panel2.SuspendLayout()
-        CType(Me.dgvDaftarPinjaman, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GunaGradientPanel1
@@ -52,7 +52,7 @@ Partial Class laporan_peminjaman
         Me.GunaGradientPanel1.GradientColor4 = System.Drawing.Color.WhiteSmoke
         Me.GunaGradientPanel1.Location = New System.Drawing.Point(0, 0)
         Me.GunaGradientPanel1.Name = "GunaGradientPanel1"
-        Me.GunaGradientPanel1.Size = New System.Drawing.Size(680, 455)
+        Me.GunaGradientPanel1.Size = New System.Drawing.Size(860, 580)
         Me.GunaGradientPanel1.TabIndex = 3
         Me.GunaGradientPanel1.Text = "GunaGradientPanel1"
         '
@@ -60,32 +60,135 @@ Partial Class laporan_peminjaman
         '
         Me.Guna2Panel2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Guna2Panel2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel2.Controls.Add(Me.txtsearchbar)
+        Me.Guna2Panel2.Controls.Add(Me.GunaLabel1)
+        Me.Guna2Panel2.Controls.Add(Me.cbjenis)
+        Me.Guna2Panel2.Controls.Add(Me.btnexport)
+        Me.Guna2Panel2.Controls.Add(Me.btnPinjamBuku)
+        Me.Guna2Panel2.Controls.Add(Me.CrystalReportViewer1)
         Me.Guna2Panel2.Controls.Add(Me.GunaLabel2)
-        Me.Guna2Panel2.Controls.Add(Me.dgvDaftarPinjaman)
         Me.Guna2Panel2.Controls.Add(Me.Guna2TileButton2)
         Me.Guna2Panel2.FillColor = System.Drawing.Color.Transparent
         Me.Guna2Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.ShadowDecoration.Parent = Me.Guna2Panel2
-        Me.Guna2Panel2.Size = New System.Drawing.Size(681, 455)
+        Me.Guna2Panel2.Size = New System.Drawing.Size(860, 580)
         Me.Guna2Panel2.TabIndex = 4
         '
-        'txtsearchbar
+        'GunaLabel1
         '
-        Me.txtsearchbar.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtsearchbar.BackColor = System.Drawing.Color.Silver
-        Me.txtsearchbar.BackgroundImage = CType(resources.GetObject("txtsearchbar.BackgroundImage"), System.Drawing.Image)
-        Me.txtsearchbar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.txtsearchbar.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtsearchbar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(103, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(183, Byte), Integer))
-        Me.txtsearchbar.Icon = CType(resources.GetObject("txtsearchbar.Icon"), System.Drawing.Image)
-        Me.txtsearchbar.Location = New System.Drawing.Point(12, 62)
-        Me.txtsearchbar.Name = "txtsearchbar"
-        Me.txtsearchbar.Size = New System.Drawing.Size(243, 35)
-        Me.txtsearchbar.TabIndex = 17
-        Me.txtsearchbar.TabStop = False
-        Me.txtsearchbar.text = ""
+        Me.GunaLabel1.AutoEllipsis = True
+        Me.GunaLabel1.AutoSize = True
+        Me.GunaLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.GunaLabel1.Location = New System.Drawing.Point(35, 64)
+        Me.GunaLabel1.Name = "GunaLabel1"
+        Me.GunaLabel1.Size = New System.Drawing.Size(115, 17)
+        Me.GunaLabel1.TabIndex = 22
+        Me.GunaLabel1.Text = "Pilih Jenis Laporan"
+        Me.GunaLabel1.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SingleBitPerPixelGridFit
+        '
+        'cbjenis
+        '
+        Me.cbjenis.BackColor = System.Drawing.Color.Transparent
+        Me.cbjenis.BorderRadius = 6
+        Me.cbjenis.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbjenis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbjenis.FocusedColor = System.Drawing.Color.Empty
+        Me.cbjenis.FocusedState.Parent = Me.cbjenis
+        Me.cbjenis.Font = New System.Drawing.Font("Segoe UI", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbjenis.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.cbjenis.FormattingEnabled = True
+        Me.cbjenis.HoverState.Parent = Me.cbjenis
+        Me.cbjenis.ItemHeight = 30
+        Me.cbjenis.Items.AddRange(New Object() {"Laporan Harian", "Laporan Bulanan", "Laporan Tahunan"})
+        Me.cbjenis.ItemsAppearance.Parent = Me.cbjenis
+        Me.cbjenis.Location = New System.Drawing.Point(31, 84)
+        Me.cbjenis.Name = "cbjenis"
+        Me.cbjenis.ShadowDecoration.Parent = Me.cbjenis
+        Me.cbjenis.Size = New System.Drawing.Size(276, 36)
+        Me.cbjenis.StartIndex = 0
+        Me.cbjenis.TabIndex = 21
+        Me.cbjenis.TextOffset = New System.Drawing.Point(5, 0)
+        '
+        'btnexport
+        '
+        Me.btnexport.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnexport.Animated = True
+        Me.btnexport.BackColor = System.Drawing.Color.Transparent
+        Me.btnexport.BorderRadius = 6
+        Me.btnexport.CheckedState.Parent = Me.btnexport
+        Me.btnexport.CustomImages.Parent = Me.btnexport
+        Me.btnexport.FillColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.btnexport.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnexport.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btnexport.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.btnexport.HoverState.FillColor = System.Drawing.Color.WhiteSmoke
+        Me.btnexport.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.btnexport.HoverState.Parent = Me.btnexport
+        Me.btnexport.ImageOffset = New System.Drawing.Point(0, 15)
+        Me.btnexport.ImageSize = New System.Drawing.Size(70, 70)
+        Me.btnexport.Location = New System.Drawing.Point(713, 84)
+        Me.btnexport.Name = "btnexport"
+        Me.btnexport.ShadowDecoration.Depth = 31
+        Me.btnexport.ShadowDecoration.Enabled = True
+        Me.btnexport.ShadowDecoration.Parent = Me.btnexport
+        Me.btnexport.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(5, 0, 0, 5)
+        Me.btnexport.Size = New System.Drawing.Size(117, 34)
+        Me.btnexport.TabIndex = 20
+        Me.btnexport.TabStop = False
+        Me.btnexport.Text = "Export"
+        '
+        'btnPinjamBuku
+        '
+        Me.btnPinjamBuku.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnPinjamBuku.Animated = True
+        Me.btnPinjamBuku.BackColor = System.Drawing.Color.Transparent
+        Me.btnPinjamBuku.BorderRadius = 6
+        Me.btnPinjamBuku.CheckedState.Parent = Me.btnPinjamBuku
+        Me.btnPinjamBuku.CustomImages.Parent = Me.btnPinjamBuku
+        Me.btnPinjamBuku.FillColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.btnPinjamBuku.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPinjamBuku.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btnPinjamBuku.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.btnPinjamBuku.HoverState.FillColor = System.Drawing.Color.WhiteSmoke
+        Me.btnPinjamBuku.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.btnPinjamBuku.HoverState.Parent = Me.btnPinjamBuku
+        Me.btnPinjamBuku.ImageOffset = New System.Drawing.Point(0, 15)
+        Me.btnPinjamBuku.ImageSize = New System.Drawing.Size(70, 70)
+        Me.btnPinjamBuku.Location = New System.Drawing.Point(313, 86)
+        Me.btnPinjamBuku.Name = "btnPinjamBuku"
+        Me.btnPinjamBuku.ShadowDecoration.Depth = 31
+        Me.btnPinjamBuku.ShadowDecoration.Enabled = True
+        Me.btnPinjamBuku.ShadowDecoration.Parent = Me.btnPinjamBuku
+        Me.btnPinjamBuku.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(5, 0, 0, 5)
+        Me.btnPinjamBuku.Size = New System.Drawing.Size(117, 34)
+        Me.btnPinjamBuku.TabIndex = 19
+        Me.btnPinjamBuku.TabStop = False
+        Me.btnPinjamBuku.Text = "View"
+        '
+        'CrystalReportViewer1
+        '
+        Me.CrystalReportViewer1.ActiveViewIndex = -1
+        Me.CrystalReportViewer1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CrystalReportViewer1.Location = New System.Drawing.Point(31, 126)
+        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
+        Me.CrystalReportViewer1.ShowCloseButton = False
+        Me.CrystalReportViewer1.ShowCopyButton = False
+        Me.CrystalReportViewer1.ShowExportButton = False
+        Me.CrystalReportViewer1.ShowGotoPageButton = False
+        Me.CrystalReportViewer1.ShowGroupTreeButton = False
+        Me.CrystalReportViewer1.ShowLogo = False
+        Me.CrystalReportViewer1.ShowPageNavigateButtons = False
+        Me.CrystalReportViewer1.ShowParameterPanelButton = False
+        Me.CrystalReportViewer1.ShowPrintButton = False
+        Me.CrystalReportViewer1.ShowTextSearchButton = False
+        Me.CrystalReportViewer1.ShowZoomButton = False
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(799, 442)
+        Me.CrystalReportViewer1.TabIndex = 18
+        Me.CrystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
         'GunaLabel2
         '
@@ -100,78 +203,6 @@ Partial Class laporan_peminjaman
         Me.GunaLabel2.TabIndex = 16
         Me.GunaLabel2.Text = " - Laporan Peminjaman"
         Me.GunaLabel2.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SingleBitPerPixelGridFit
-        '
-        'dgvDaftarPinjaman
-        '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.dgvDaftarPinjaman.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvDaftarPinjaman.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.dgvDaftarPinjaman.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgvDaftarPinjaman.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.dgvDaftarPinjaman.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dgvDaftarPinjaman.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.dgvDaftarPinjaman.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(103, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(183, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvDaftarPinjaman.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.dgvDaftarPinjaman.ColumnHeadersHeight = 21
-        Me.dgvDaftarPinjaman.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(240, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(123, Byte), Integer), CType(CType(207, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvDaftarPinjaman.DefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvDaftarPinjaman.EnableHeadersVisualStyles = False
-        Me.dgvDaftarPinjaman.GridColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(232, Byte), Integer))
-        Me.dgvDaftarPinjaman.Location = New System.Drawing.Point(12, 103)
-        Me.dgvDaftarPinjaman.Name = "dgvDaftarPinjaman"
-        Me.dgvDaftarPinjaman.ReadOnly = True
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvDaftarPinjaman.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
-        Me.dgvDaftarPinjaman.RowHeadersVisible = False
-        Me.dgvDaftarPinjaman.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.dgvDaftarPinjaman.RowTemplate.Height = 35
-        Me.dgvDaftarPinjaman.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvDaftarPinjaman.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvDaftarPinjaman.Size = New System.Drawing.Size(656, 302)
-        Me.dgvDaftarPinjaman.TabIndex = 14
-        Me.dgvDaftarPinjaman.TabStop = False
-        Me.dgvDaftarPinjaman.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.DeepPurple
-        Me.dgvDaftarPinjaman.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.dgvDaftarPinjaman.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.dgvDaftarPinjaman.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.dgvDaftarPinjaman.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.dgvDaftarPinjaman.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.dgvDaftarPinjaman.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.dgvDaftarPinjaman.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(232, Byte), Integer))
-        Me.dgvDaftarPinjaman.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(103, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(183, Byte), Integer))
-        Me.dgvDaftarPinjaman.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dgvDaftarPinjaman.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.dgvDaftarPinjaman.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.dgvDaftarPinjaman.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgvDaftarPinjaman.ThemeStyle.HeaderStyle.Height = 21
-        Me.dgvDaftarPinjaman.ThemeStyle.ReadOnly = True
-        Me.dgvDaftarPinjaman.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.dgvDaftarPinjaman.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.dgvDaftarPinjaman.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.dgvDaftarPinjaman.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black
-        Me.dgvDaftarPinjaman.ThemeStyle.RowsStyle.Height = 35
-        Me.dgvDaftarPinjaman.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(123, Byte), Integer), CType(CType(207, Byte), Integer))
-        Me.dgvDaftarPinjaman.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
         '
         'Guna2TileButton2
         '
@@ -190,27 +221,27 @@ Partial Class laporan_peminjaman
         Me.Guna2TileButton2.HoverState.Parent = Me.Guna2TileButton2
         Me.Guna2TileButton2.ImageOffset = New System.Drawing.Point(0, 15)
         Me.Guna2TileButton2.ImageSize = New System.Drawing.Size(70, 70)
-        Me.Guna2TileButton2.Location = New System.Drawing.Point(12, 103)
+        Me.Guna2TileButton2.Location = New System.Drawing.Point(31, 126)
         Me.Guna2TileButton2.Name = "Guna2TileButton2"
         Me.Guna2TileButton2.ShadowDecoration.Depth = 31
         Me.Guna2TileButton2.ShadowDecoration.Enabled = True
         Me.Guna2TileButton2.ShadowDecoration.Parent = Me.Guna2TileButton2
         Me.Guna2TileButton2.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(5, 0, 0, 5)
-        Me.Guna2TileButton2.Size = New System.Drawing.Size(656, 302)
+        Me.Guna2TileButton2.Size = New System.Drawing.Size(799, 442)
         Me.Guna2TileButton2.TabIndex = 15
         Me.Guna2TileButton2.TabStop = False
         Me.Guna2TileButton2.TextOffset = New System.Drawing.Point(0, 6)
         '
-        'Guna2Elipse1
+        'Guna2Elipse2
         '
-        Me.Guna2Elipse1.TargetControl = Me.dgvDaftarPinjaman
+        Me.Guna2Elipse2.TargetControl = Me.CrystalReportViewer1
         '
         'laporan_peminjaman
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(680, 455)
+        Me.ClientSize = New System.Drawing.Size(860, 580)
         Me.Controls.Add(Me.GunaGradientPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "laporan_peminjaman"
@@ -220,15 +251,19 @@ Partial Class laporan_peminjaman
         Me.GunaGradientPanel1.ResumeLayout(False)
         Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel2.PerformLayout()
-        CType(Me.dgvDaftarPinjaman, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents GunaGradientPanel1 As Guna.UI.WinForms.GunaGradientPanel
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents dgvDaftarPinjaman As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents Guna2TileButton2 As Guna.UI2.WinForms.Guna2TileButton
     Friend WithEvents GunaLabel2 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents txtsearchbar As Bunifu.Framework.UI.BunifuTextbox
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Friend WithEvents Guna2Elipse2 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents btnexport As Guna.UI2.WinForms.Guna2TileButton
+    Friend WithEvents btnPinjamBuku As Guna.UI2.WinForms.Guna2TileButton
+    Friend WithEvents GunaLabel1 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents cbjenis As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents lap_pinjam1 As lap_pinjam
 End Class

@@ -212,7 +212,7 @@ Partial Class Data_Master_Bukufr
         '
         'lblid
         '
-        Me.lblid.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.lblid.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblid.AutoSize = True
         Me.lblid.BackColor = System.Drawing.Color.Transparent
         Me.lblid.Font = New System.Drawing.Font("Segoe UI", 9.0!)
@@ -226,6 +226,7 @@ Partial Class Data_Master_Bukufr
         '
         'txtcaribuku
         '
+        Me.txtcaribuku.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.txtcaribuku.BorderRadius = 6
         Me.txtcaribuku.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtcaribuku.DefaultText = ""
