@@ -35,6 +35,8 @@ Public Class Data_Master_Bukufr_Editstok
             custMsgBoxx.lblMessage.Text = "Input Berhasil!"
             custMsgBoxx.ShowDialog()
             Data_Master.btnDataBuku.PerformClick()
+            Call bersih()
+            Me.Refresh()
         End If
     End Sub
 

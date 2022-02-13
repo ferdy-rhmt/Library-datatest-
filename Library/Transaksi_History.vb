@@ -18,17 +18,21 @@ Public Class Transaksi_History
     Private Sub txt_keterangan_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txt_keterangan.SelectedIndexChanged
 
         If txt_keterangan.Text = "Peminjaman" Then
+            lbljenis.Text = "Dipinjam"
             dgvhistory.Columns(0).HeaderText = "ID Pinjam"
             dgvhistory.Columns(1).HeaderText = "Tanggal Pinjam"
-            dgvhistory.Columns(6).HeaderText = "Dipijam"
-            lbljenis.Text = "Dipinjam"
+            dgvhistory.Columns(6).HeaderText = "Dipinjam"
+            Call Koneksi()
             Call tampil()
         ElseIf txt_keterangan.Text = "Pengembalian" Then
+            lbljenis.Text = "Dikembalikan"
             dgvhistory.Columns(0).HeaderText = "ID Kembali"
             dgvhistory.Columns(1).HeaderText = "Tanggal Kembali"
             dgvhistory.Columns(6).HeaderText = "Dikembalikan"
-            lbljenis.Text = "Dikembalikan"
+            Call Koneksi()
             Call tampil()
+        Else
+
         End If
     End Sub
 

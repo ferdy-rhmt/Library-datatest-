@@ -40,6 +40,7 @@ Partial Class Data_Master_Anggotafr
         Me.btnDelAnggota = New Guna.UI2.WinForms.Guna2TileButton()
         Me.btnAddAnggota = New Guna.UI2.WinForms.Guna2TileButton()
         Me.Guna2TileButton1 = New Guna.UI2.WinForms.Guna2TileButton()
+        Me.lblid = New Guna.UI.WinForms.GunaLabel()
         CType(Me.dgvAddAnggota, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GunaGradientPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -151,6 +152,7 @@ Partial Class Data_Master_Anggotafr
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GunaGradientPanel1.BackgroundImage = CType(resources.GetObject("GunaGradientPanel1.BackgroundImage"), System.Drawing.Image)
         Me.GunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GunaGradientPanel1.Controls.Add(Me.lblid)
         Me.GunaGradientPanel1.Controls.Add(Me.txtcarinama)
         Me.GunaGradientPanel1.Controls.Add(Me.dgvAddAnggota)
         Me.GunaGradientPanel1.Controls.Add(Me.GunaLabel2)
@@ -291,6 +293,20 @@ Partial Class Data_Master_Anggotafr
         Me.Guna2TileButton1.TabIndex = 13
         Me.Guna2TileButton1.TextOffset = New System.Drawing.Point(0, 6)
         '
+        'lblid
+        '
+        Me.lblid.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblid.AutoSize = True
+        Me.lblid.BackColor = System.Drawing.Color.Transparent
+        Me.lblid.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.lblid.ForeColor = System.Drawing.Color.Silver
+        Me.lblid.Location = New System.Drawing.Point(556, 440)
+        Me.lblid.Name = "lblid"
+        Me.lblid.Size = New System.Drawing.Size(12, 15)
+        Me.lblid.TabIndex = 17
+        Me.lblid.Text = "_"
+        Me.lblid.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'Data_Master_Anggotafr
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -322,4 +338,5 @@ Partial Class Data_Master_Anggotafr
     Friend WithEvents nama_siswa As DataGridViewTextBoxColumn
     Friend WithEvents kelas_siswa As DataGridViewTextBoxColumn
     Friend WithEvents jurusan_siswa As DataGridViewTextBoxColumn
+    Friend WithEvents lblid As Guna.UI.WinForms.GunaLabel
 End Class

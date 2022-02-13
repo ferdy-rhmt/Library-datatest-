@@ -35,13 +35,6 @@ Partial Class Transaksi_History
         Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
         Me.txt_keterangan = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.dgvhistory = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.idpinjam_idkembali = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.penerbit = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.jumlah = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.id_buku = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.judul = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.pinjam_kembali = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Guna2TileButton2 = New Guna.UI2.WinForms.Guna2TileButton()
         Me.lbljenis = New Guna.UI.WinForms.GunaLabel()
         Me.txtcari = New Guna.UI2.WinForms.Guna2TextBox()
@@ -49,6 +42,13 @@ Partial Class Transaksi_History
         Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.idpinjam_idkembali = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.penerbit = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.jumlah = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.id_buku = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.judul = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.pinjam_kembali = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GunaGradientPanel1.SuspendLayout()
         CType(Me.dgvhistory, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -132,7 +132,6 @@ Partial Class Transaksi_History
         Me.txt_keterangan.Name = "txt_keterangan"
         Me.txt_keterangan.ShadowDecoration.Parent = Me.txt_keterangan
         Me.txt_keterangan.Size = New System.Drawing.Size(165, 36)
-        Me.txt_keterangan.StartIndex = 0
         Me.txt_keterangan.TabIndex = 57
         '
         'dgvhistory
@@ -207,59 +206,6 @@ Partial Class Transaksi_History
         Me.dgvhistory.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(123, Byte), Integer), CType(CType(207, Byte), Integer))
         Me.dgvhistory.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
         '
-        'idpinjam_idkembali
-        '
-        Me.idpinjam_idkembali.FillWeight = 50.0!
-        Me.idpinjam_idkembali.HeaderText = "ID Pinjam"
-        Me.idpinjam_idkembali.Name = "idpinjam_idkembali"
-        Me.idpinjam_idkembali.ReadOnly = True
-        '
-        'penerbit
-        '
-        Me.penerbit.FillWeight = 50.0!
-        Me.penerbit.HeaderText = "Tanggal Pinjam"
-        Me.penerbit.Name = "penerbit"
-        Me.penerbit.ReadOnly = True
-        '
-        'jumlah
-        '
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.jumlah.DefaultCellStyle = DataGridViewCellStyle3
-        Me.jumlah.FillWeight = 40.0!
-        Me.jumlah.HeaderText = "ID Anggota"
-        Me.jumlah.Name = "jumlah"
-        Me.jumlah.ReadOnly = True
-        '
-        'Column1
-        '
-        Me.Column1.FillWeight = 90.0!
-        Me.Column1.HeaderText = "Nama Anggota"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'id_buku
-        '
-        Me.id_buku.FillWeight = 40.0!
-        Me.id_buku.HeaderText = "ID Buku"
-        Me.id_buku.Name = "id_buku"
-        Me.id_buku.ReadOnly = True
-        '
-        'judul
-        '
-        Me.judul.FillWeight = 110.0!
-        Me.judul.HeaderText = "Judul"
-        Me.judul.Name = "judul"
-        Me.judul.ReadOnly = True
-        '
-        'pinjam_kembali
-        '
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.pinjam_kembali.DefaultCellStyle = DataGridViewCellStyle4
-        Me.pinjam_kembali.FillWeight = 30.0!
-        Me.pinjam_kembali.HeaderText = "Dipinjam"
-        Me.pinjam_kembali.Name = "pinjam_kembali"
-        Me.pinjam_kembali.ReadOnly = True
-        '
         'Guna2TileButton2
         '
         Me.Guna2TileButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
@@ -329,7 +275,7 @@ Partial Class Transaksi_History
         Me.txtcari.Name = "txtcari"
         Me.txtcari.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtcari.PlaceholderForeColor = System.Drawing.Color.Black
-        Me.txtcari.PlaceholderText = ""
+        Me.txtcari.PlaceholderText = "Masukkan nama..."
         Me.txtcari.SelectedText = ""
         Me.txtcari.ShadowDecoration.Enabled = True
         Me.txtcari.ShadowDecoration.Parent = Me.txtcari
@@ -386,6 +332,59 @@ Partial Class Transaksi_History
         Me.GunaLabel2.TabIndex = 11
         Me.GunaLabel2.Text = " - Riwayat Peminjaman/Pengembalian"
         Me.GunaLabel2.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SingleBitPerPixelGridFit
+        '
+        'idpinjam_idkembali
+        '
+        Me.idpinjam_idkembali.FillWeight = 50.0!
+        Me.idpinjam_idkembali.HeaderText = "ID Pinjam"
+        Me.idpinjam_idkembali.Name = "idpinjam_idkembali"
+        Me.idpinjam_idkembali.ReadOnly = True
+        '
+        'penerbit
+        '
+        Me.penerbit.FillWeight = 50.0!
+        Me.penerbit.HeaderText = "Tanggal Pinjam"
+        Me.penerbit.Name = "penerbit"
+        Me.penerbit.ReadOnly = True
+        '
+        'jumlah
+        '
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.jumlah.DefaultCellStyle = DataGridViewCellStyle3
+        Me.jumlah.FillWeight = 40.0!
+        Me.jumlah.HeaderText = "ID Anggota"
+        Me.jumlah.Name = "jumlah"
+        Me.jumlah.ReadOnly = True
+        '
+        'Column1
+        '
+        Me.Column1.FillWeight = 90.0!
+        Me.Column1.HeaderText = "Nama Anggota"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'id_buku
+        '
+        Me.id_buku.FillWeight = 40.0!
+        Me.id_buku.HeaderText = "ID Buku"
+        Me.id_buku.Name = "id_buku"
+        Me.id_buku.ReadOnly = True
+        '
+        'judul
+        '
+        Me.judul.FillWeight = 110.0!
+        Me.judul.HeaderText = "Judul"
+        Me.judul.Name = "judul"
+        Me.judul.ReadOnly = True
+        '
+        'pinjam_kembali
+        '
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.pinjam_kembali.DefaultCellStyle = DataGridViewCellStyle4
+        Me.pinjam_kembali.FillWeight = 30.0!
+        Me.pinjam_kembali.HeaderText = "Dipinjam"
+        Me.pinjam_kembali.Name = "pinjam_kembali"
+        Me.pinjam_kembali.ReadOnly = True
         '
         'Transaksi_History
         '

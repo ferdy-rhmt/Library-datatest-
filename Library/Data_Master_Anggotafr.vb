@@ -21,7 +21,7 @@ Public Class Data_Master_Anggotafr
 
     Private Sub btnDelAnggota_Click(sender As Object, e As EventArgs) Handles btnDelAnggota.Click
         'Database
-        cmd = New OleDbCommand("delete * from tbl_anggota where id_anggota like '%" & txtcarinama.Text & "%' ", conn)
+        cmd = New OleDbCommand("delete * from tbl_anggota where id_anggota like '%" & lblid.Text & "%' ", conn)
         cmd.ExecuteNonQuery()
         MessageBox.Show("Data Berhasil dihapus!")
         forminpanel(New Data_Master_Anggotafr)
@@ -48,6 +48,6 @@ Public Class Data_Master_Anggotafr
         cmd = New OleDbCommand("select * from tbl_anggota where nama_anggota = '" & dgvAddAnggota.Rows(e.RowIndex).Cells(1).Value & "'", conn)
         rd = cmd.ExecuteReader
         rd.Read()
-        txtcarinama.Text = rd.Item("id_anggota")
+        lblid.Text = rd.Item("id_anggota")
     End Sub
 End Class

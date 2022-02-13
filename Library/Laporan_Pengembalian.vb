@@ -1,4 +1,4 @@
-﻿Public Class laporan_peminjaman
+﻿Public Class laporan_pengembalian
     Private Sub laporan_peminjaman_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -6,9 +6,9 @@
 
     Private Sub btnPinjamBuku_Click(sender As Object, e As EventArgs) Handles btnPinjamBuku.Click
         If cbjenis.SelectedIndex = 0 Then
-            Laporan_Hari_pinjam.ShowDialog()
+            Laporan_Hari_kembali.ShowDialog()
         ElseIf cbjenis.SelectedIndex = 1 Then
-            Laporan_Bulan_pinjam.ShowDialog()
+            Laporan_Bulan_kembali.ShowDialog()
         ElseIf cbjenis.SelectedIndex = 2 Then
 
         Else

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class laporan_peminjaman
+Partial Class laporan_pengembalian
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class laporan_peminjaman
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(laporan_peminjaman))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(laporan_pengembalian))
         Me.GunaGradientPanel1 = New Guna.UI.WinForms.GunaGradientPanel()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
@@ -199,9 +199,9 @@ Partial Class laporan_peminjaman
         Me.GunaLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
         Me.GunaLabel2.Location = New System.Drawing.Point(17, 15)
         Me.GunaLabel2.Name = "GunaLabel2"
-        Me.GunaLabel2.Size = New System.Drawing.Size(208, 23)
+        Me.GunaLabel2.Size = New System.Drawing.Size(224, 23)
         Me.GunaLabel2.TabIndex = 16
-        Me.GunaLabel2.Text = " - Laporan Peminjaman"
+        Me.GunaLabel2.Text = " - Laporan Pengembalian"
         Me.GunaLabel2.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SingleBitPerPixelGridFit
         '
         'Guna2TileButton2
@@ -236,7 +236,7 @@ Partial Class laporan_peminjaman
         '
         Me.Guna2Elipse2.TargetControl = Me.CrystalReportViewer1
         '
-        'laporan_peminjaman
+        'laporan_pengembalian
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -244,7 +244,7 @@ Partial Class laporan_peminjaman
         Me.ClientSize = New System.Drawing.Size(860, 580)
         Me.Controls.Add(Me.GunaGradientPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "laporan_peminjaman"
+        Me.Name = "laporan_pengembalian"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

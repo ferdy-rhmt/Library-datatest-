@@ -1,6 +1,12 @@
 ﻿Imports System.Data.OleDb
 Public Class Data_Master_Bukufr_Add
 
+    Sub bersih()
+        txtnamabuku.Text = ""
+        txtpenerbit.Text = ""
+        txtstok.Text = ""
+        txtterbit.Text = ""
+    End Sub
     Sub autonumber()
         cmd = New OleDbCommand("Select * From tbl_buku where id_buku in (select max(id_buku) from tbl_buku)", conn)
         Dim UrutanKode As String
@@ -19,6 +25,7 @@ Public Class Data_Master_Bukufr_Add
         Guna.UI.Lib.GraphicsHelper.ShadowForm(Me)
         Me.Refresh()
         Call autonumber()
+        Call bersih()
     End Sub
 
     Private Sub btnCancelAdd_Click(sender As Object, e As EventArgs) Handles btnCancelAdd.Click
@@ -43,6 +50,8 @@ Public Class Data_Master_Bukufr_Add
             custMsgBoxx.lblMessage.Text = "Input Berhasil!"
             custMsgBoxx.ShowDialog()
             Data_Master.btnDataBuku.PerformClick()
+            Call autonumber()
+            Call bersih()
         End If
     End Sub
 

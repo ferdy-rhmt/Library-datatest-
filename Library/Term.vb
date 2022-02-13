@@ -191,7 +191,8 @@ Module Term
                     MainForm.Guna2AnimateWindow1.SetAnimateWindow(MainForm)
                     Login_Admin.Close()
                 Else
-                    MainForm.lblNamaAdmin.Text = Login_Admin.txtusername.Text
+                    MainForm.lblidadmin.Text = rd("id_admin")
+                    MainForm.lblNamaAdmin.Text = rd("nama_admin")
                     MainForm.lblleveladmin.Text = rd("level_admin")
                     MainForm.Refresh()
                     Login_Admin.Close()
@@ -203,7 +204,6 @@ Module Term
         End If
     End Sub
     Public Sub cancel_login_term()
-        Login_Admin.Close()
-        MainForm.Close()
+        End
     End Sub
 End Module

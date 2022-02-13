@@ -133,10 +133,34 @@
     <Compile Include="Data_Master_Adminfr.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Laporan_Peminjaman_Hari.Designer.vb">
-      <DependentUpon>Laporan_Peminjaman_Hari.vb</DependentUpon>
+    <Compile Include="Laporan_Bulan_kembali.Designer.vb">
+      <DependentUpon>Laporan_Bulan_kembali.vb</DependentUpon>
     </Compile>
-    <Compile Include="Laporan_Peminjaman_Hari.vb">
+    <Compile Include="Laporan_Bulan_kembali.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan_Hari_kembali.Designer.vb">
+      <DependentUpon>Laporan_Hari_kembali.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan_Hari_kembali.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan_Pengembalian.Designer.vb">
+      <DependentUpon>Laporan_Pengembalian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan_Pengembalian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan_Bulan_pinjam.Designer.vb">
+      <DependentUpon>Laporan_Bulan_pinjam.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan_Bulan_pinjam.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan_Hari_pinjam.Designer.vb">
+      <DependentUpon>Laporan_Hari_pinjam.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan_Hari_pinjam.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Lainnya_Ubahpass.Designer.vb">
@@ -192,6 +216,24 @@
     </Compile>
     <Compile Include="Laporan.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lap_kembali.vb">
+      <DependentUpon>lap_kembali.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="lap_kembali_bulan.vb">
+      <DependentUpon>lap_kembali_bulan.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="lap_pinjam_bulan.vb">
+      <DependentUpon>lap_pinjam_bulan.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="lap_pinjam.vb">
       <AutoGen>True</AutoGen>
@@ -272,8 +314,20 @@
     <EmbeddedResource Include="Data_Master_Adminfr.resx">
       <DependentUpon>Data_Master_Adminfr.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Laporan_Peminjaman_Hari.resx">
-      <DependentUpon>Laporan_Peminjaman_Hari.vb</DependentUpon>
+    <EmbeddedResource Include="Laporan_Bulan_kembali.resx">
+      <DependentUpon>Laporan_Bulan_kembali.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan_Hari_kembali.resx">
+      <DependentUpon>Laporan_Hari_kembali.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan_Pengembalian.resx">
+      <DependentUpon>Laporan_Pengembalian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan_Bulan_pinjam.resx">
+      <DependentUpon>Laporan_Bulan_pinjam.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan_Hari_pinjam.resx">
+      <DependentUpon>Laporan_Hari_pinjam.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lainnya_Ubahpass.resx">
       <DependentUpon>Lainnya_Ubahpass.vb</DependentUpon>
@@ -301,6 +355,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Laporan.resx">
       <DependentUpon>Laporan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lap_kembali.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>lap_kembali.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lap_kembali_bulan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>lap_kembali_bulan.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lap_pinjam_bulan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>lap_pinjam_bulan.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="lap_pinjam.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

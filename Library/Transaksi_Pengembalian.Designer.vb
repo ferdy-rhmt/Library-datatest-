@@ -81,6 +81,7 @@ Partial Class Transaksi_Pengembalian
         Me.txtdenda = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.txtkmbsekarang = New Guna.UI2.WinForms.Guna2TextBox()
         Me.GunaGradientPanel1.SuspendLayout()
         CType(Me.dgvsedangpinjam, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvInputkembali, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -90,6 +91,7 @@ Partial Class Transaksi_Pengembalian
         '
         Me.GunaGradientPanel1.BackgroundImage = CType(resources.GetObject("GunaGradientPanel1.BackgroundImage"), System.Drawing.Image)
         Me.GunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GunaGradientPanel1.Controls.Add(Me.txtkmbsekarang)
         Me.GunaGradientPanel1.Controls.Add(Me.txtdipinjam)
         Me.GunaGradientPanel1.Controls.Add(Me.txtdendaperhari)
         Me.GunaGradientPanel1.Controls.Add(Me.Guna2TextBox1)
@@ -1245,6 +1247,42 @@ Partial Class Transaksi_Pengembalian
         '
         Me.Guna2Elipse2.TargetControl = Me.dgvInputkembali
         '
+        'txtkmbsekarang
+        '
+        Me.txtkmbsekarang.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.txtkmbsekarang.BackColor = System.Drawing.Color.Transparent
+        Me.txtkmbsekarang.BorderRadius = 5
+        Me.txtkmbsekarang.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtkmbsekarang.DefaultText = "0"
+        Me.txtkmbsekarang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtkmbsekarang.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtkmbsekarang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtkmbsekarang.DisabledState.Parent = Me.txtkmbsekarang
+        Me.txtkmbsekarang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtkmbsekarang.FillColor = System.Drawing.Color.WhiteSmoke
+        Me.txtkmbsekarang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtkmbsekarang.FocusedState.Parent = Me.txtkmbsekarang
+        Me.txtkmbsekarang.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtkmbsekarang.ForeColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(120, Byte), Integer))
+        Me.txtkmbsekarang.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtkmbsekarang.HoverState.Parent = Me.txtkmbsekarang
+        Me.txtkmbsekarang.Location = New System.Drawing.Point(781, 370)
+        Me.txtkmbsekarang.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtkmbsekarang.Name = "txtkmbsekarang"
+        Me.txtkmbsekarang.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtkmbsekarang.PlaceholderForeColor = System.Drawing.Color.DarkGray
+        Me.txtkmbsekarang.PlaceholderText = ""
+        Me.txtkmbsekarang.SelectedText = ""
+        Me.txtkmbsekarang.SelectionStart = 1
+        Me.txtkmbsekarang.ShadowDecoration.Enabled = True
+        Me.txtkmbsekarang.ShadowDecoration.Parent = Me.txtkmbsekarang
+        Me.txtkmbsekarang.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(5, 0, 0, 5)
+        Me.txtkmbsekarang.Size = New System.Drawing.Size(70, 25)
+        Me.txtkmbsekarang.TabIndex = 75
+        Me.txtkmbsekarang.TabStop = False
+        Me.txtkmbsekarang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtkmbsekarang.TextOffset = New System.Drawing.Point(5, 0)
+        '
         'Transaksi_Pengembalian
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1312,4 +1350,5 @@ Partial Class Transaksi_Pengembalian
     Friend WithEvents jumlah As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents txtkmbsekarang As Guna.UI2.WinForms.Guna2TextBox
 End Class

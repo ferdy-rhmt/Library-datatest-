@@ -1,5 +1,9 @@
 ﻿Imports System.Data.OleDb
 Public Class Lainnya_Ubahpass
+    Sub bersih()
+        txtpassbaru.Text = ""
+        txtpassbaruretype.Text = ""
+    End Sub
     Sub tampil()
         Call Koneksi()
         cmd = New OleDbCommand("select * from tbl_admin where id_admin = '" & txtid.Text & "'", conn)
@@ -43,10 +47,11 @@ Public Class Lainnya_Ubahpass
             cmd.ExecuteNonQuery()
             MessageBox.Show("Password berhasil diubah !", "Berhasil!", MessageBoxButtons.OK)
             Call tampil()
+            Call bersih()
         End If
     End Sub
 
     Private Sub txtid_TextChanged(sender As Object, e As EventArgs) Handles txtid.TextChanged
-        tampil()
+        Call tampil()
     End Sub
 End Class

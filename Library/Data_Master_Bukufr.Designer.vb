@@ -216,7 +216,7 @@ Partial Class Data_Master_Bukufr
         Me.lblid.AutoSize = True
         Me.lblid.BackColor = System.Drawing.Color.Transparent
         Me.lblid.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.lblid.ForeColor = System.Drawing.Color.DarkGray
+        Me.lblid.ForeColor = System.Drawing.Color.Silver
         Me.lblid.Location = New System.Drawing.Point(599, 431)
         Me.lblid.Name = "lblid"
         Me.lblid.Size = New System.Drawing.Size(12, 15)

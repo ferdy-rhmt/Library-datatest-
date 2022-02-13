@@ -35,8 +35,8 @@ Public Class Transaksi_Peminjaman
         If Not rd.HasRows Then
             UrutanKode = Format(Now, "yyMMdd") + "01"
         Else
-            Hitung = Microsoft.VisualBasic.Mid(rd.GetString(0), 8) + 1
-            UrutanKode = Format(Now, "MMyydd") + Microsoft.VisualBasic.Right("00" & Hitung, 2)
+            Hitung = Microsoft.VisualBasic.Mid(rd.GetString(0), 10) + 1
+            UrutanKode = Format(Now, "yyMMdd") + Microsoft.VisualBasic.Right("00" & Hitung, 2)
         End If
         txtidpinjam.Text = "PJ" + UrutanKode
     End Sub
@@ -66,8 +66,23 @@ Public Class Transaksi_Peminjaman
         'save ke database tbl_pinjam
         cmd = New OleDbCommand("insert into tbl_pinjam values('" & txtidpinjam.Text &
                                                             "', '" & txttanggal.Text &
-                                                              "', '" & txtidagt.Text & "') ", conn)
+                                                              "', '" & txtidagt.Text &
+                                                              "', '" & txtpjmsekarang.Text & "') ", conn)
         cmd.ExecuteNonQuery()
+
+        'sv ke tbl total pinjam
+        cmd = New OleDbCommand("select * from tbl_total_pinjam where tanggal_pinjam = #" & txttanggal.Text & "# ", conn)
+        rd = cmd.ExecuteReader
+        rd.Read()
+        If rd.HasRows Then
+            Dim tambahtotal As String = "update tbl_total_pinjam set total_pinjam = '" & rd.Item("total_pinjam") + Val(txtpjmsekarang.Text) & "' where tanggal_pinjam = #" & txttanggal.Text & "#"
+            cmd = New OleDbCommand(tambahtotal, conn)
+            cmd.ExecuteNonQuery()
+        Else
+            cmd = New OleDbCommand("insert into tbl_total_pinjam values(#" & txttanggal.Text &
+                                                                 "#,'" & txtpjmsekarang.Text & "')", conn)
+            cmd.ExecuteNonQuery()
+        End If
 
         For baris As Integer = 0 To dgvInputPinjaman.RowCount - 2
             'save ke database tbl_pinjam_detail
@@ -86,6 +101,7 @@ Public Class Transaksi_Peminjaman
         MessageBox.Show("Peminjaman Berhasil diSimpan!", "Berhasil!", MessageBoxButtons.OK, MessageBoxIcon.Information)
         dgvInputPinjaman.Rows.Clear()
         Call bersih()
+        forminpanel(Me)
         Call nomorotomatis()
         Call kondisiawal()
         dgvsedangpinjam.Columns.Clear()

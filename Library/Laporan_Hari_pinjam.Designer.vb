@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Laporan_Peminjaman_Hari
+Partial Class Laporan_Hari_pinjam
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.

@@ -639,7 +639,7 @@ Partial Class Transaksi_Peminjaman
         Me.txttanggal.BackColor = System.Drawing.Color.Transparent
         Me.txttanggal.BorderRadius = 6
         Me.txttanggal.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txttanggal.DefaultText = "2021-02-09"
+        Me.txttanggal.DefaultText = "dd-MM-yyyy"
         Me.txttanggal.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
         Me.txttanggal.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.txttanggal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
@@ -660,7 +660,6 @@ Partial Class Transaksi_Peminjaman
         Me.txttanggal.PlaceholderText = "Tanggal"
         Me.txttanggal.ReadOnly = True
         Me.txttanggal.SelectedText = ""
-        Me.txttanggal.SelectionStart = 10
         Me.txttanggal.ShadowDecoration.Enabled = True
         Me.txttanggal.ShadowDecoration.Parent = Me.txttanggal
         Me.txttanggal.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(5, 0, 0, 5)

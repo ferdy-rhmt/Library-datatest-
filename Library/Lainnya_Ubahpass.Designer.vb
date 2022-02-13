@@ -246,7 +246,6 @@ Partial Class Lainnya_Ubahpass
         Me.txtid.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(3, 0, 0, 3)
         Me.txtid.Size = New System.Drawing.Size(160, 23)
         Me.txtid.TabIndex = 33
-        Me.txtid.UseSystemPasswordChar = True
         '
         'GunaLabel5
         '
@@ -293,7 +292,6 @@ Partial Class Lainnya_Ubahpass
         Me.txtnama.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(3, 0, 0, 3)
         Me.txtnama.Size = New System.Drawing.Size(160, 23)
         Me.txtnama.TabIndex = 37
-        Me.txtnama.UseSystemPasswordChar = True
         '
         'GunaLabel7
         '
@@ -353,7 +351,6 @@ Partial Class Lainnya_Ubahpass
         Me.txtpasslama.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(3, 0, 0, 3)
         Me.txtpasslama.Size = New System.Drawing.Size(160, 23)
         Me.txtpasslama.TabIndex = 40
-        Me.txtpasslama.UseSystemPasswordChar = True
         '
         'txtpassbaru
         '
@@ -385,7 +382,6 @@ Partial Class Lainnya_Ubahpass
         Me.txtpassbaru.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(3, 0, 0, 3)
         Me.txtpassbaru.Size = New System.Drawing.Size(160, 23)
         Me.txtpassbaru.TabIndex = 42
-        Me.txtpassbaru.UseSystemPasswordChar = True
         '
         'GunaLabel11
         '
@@ -430,7 +426,6 @@ Partial Class Lainnya_Ubahpass
         Me.txtpassbaruretype.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(3, 0, 0, 3)
         Me.txtpassbaruretype.Size = New System.Drawing.Size(160, 23)
         Me.txtpassbaruretype.TabIndex = 45
-        Me.txtpassbaruretype.UseSystemPasswordChar = True
         '
         'GunaLabel12
         '

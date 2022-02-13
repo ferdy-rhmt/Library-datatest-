@@ -1,5 +1,10 @@
 ﻿Imports System.Data.OleDb
 Public Class Data_Master_Adminfr_Add
+    Sub bersih()
+        txtNameAdmin.Text = ""
+        txtpassw.Text = ""
+        txtretypepassw.Text = ""
+    End Sub
     Sub nomoroto()
         Dim urutan As String
         Dim hitung As Long
@@ -20,9 +25,7 @@ Public Class Data_Master_Adminfr_Add
         Guna.UI.Lib.GraphicsHelper.ShadowForm(Me)
         Call nomoroto()
         Me.Refresh()
-        txtNameAdmin.Text = ""
-        txtpassw.Text = ""
-        txtretypepassw.Text = ""
+        Call bersih()
     End Sub
 
     Private Sub btnCancelAdd_Click(sender As Object, e As EventArgs) Handles btnCancelAdd.Click
@@ -58,6 +61,8 @@ Public Class Data_Master_Adminfr_Add
             MessageBox.Show("Data berhasil disimpan!", "Berhasil!", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Data_Master_Adminfr.dgvAddAdmin.Refresh()
             Data_Master.btnDataAdmin.PerformClick()
+            Call nomoroto()
+            Call bersih()
         End If
     End Sub
 End Class

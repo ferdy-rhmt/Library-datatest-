@@ -2,7 +2,7 @@
 Imports CrystalDecisions.CrystalReports.Engine
 Imports CrystalDecisions.Shared
 
-Public Class Laporan_Peminjaman_Hari
+Public Class Laporan_Hari_pinjam
 
     Private Sub Data_Master_RakBuku_Add_Load(sender As Object, e As EventArgs) Handles Me.Load
         Guna.UI.Lib.GraphicsHelper.ShadowForm(Me)
@@ -15,17 +15,18 @@ Public Class Laporan_Peminjaman_Hari
     End Sub
 
     Private Sub btnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
+        Me.Close()
         Try
             Dim cryrpt As New ReportDocument
             Dim laporan As New lap_pinjam
             cryrpt = laporan
 
-            laporan_peminjaman.CrystalReportViewer1.SelectionFormula = "({tbl_pinjam.tanggal_pinjam})='" & date1.Text & "'"
+            laporan_peminjaman.CrystalReportViewer1.SelectionFormula = "({tbl_pinjam.tanggal_pinjam})=#" & date1.Text & "#"
             forminpanel(laporan_peminjaman)
             laporan_peminjaman.CrystalReportViewer1.ReportSource = cryrpt
             laporan_peminjaman.CrystalReportViewer1.Refresh()
             laporan_peminjaman.CrystalReportViewer1.RefreshReport()
-            Me.Close()
+            laporan_peminjaman.CrystalReportViewer1.Zoom(75)
         Catch ex As Exception
 
         End Try

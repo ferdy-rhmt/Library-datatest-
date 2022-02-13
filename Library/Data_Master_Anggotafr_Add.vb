@@ -1,5 +1,11 @@
 ﻿Imports System.Data.OleDb
 Public Class Data_Master_Anggotafr_Add
+    Sub bersih()
+        txtNamaAnggota.Text = ""
+        cmbkelas1.SelectedIndex = 0
+        cmbkelas2.SelectedIndex = 0
+        cmbjurusan.SelectedIndex = 0
+    End Sub
     Sub kondisi_awal()
         txtIDanggota.ReadOnly = True
         txtNamaAnggota.PlaceholderText = "Nama Siswa"
@@ -48,6 +54,8 @@ Public Class Data_Master_Anggotafr_Add
             custMsgBoxx.lblMessage.Text = "Input Berhasil!"
             custMsgBoxx.ShowDialog()
             Data_Master.btnDataAnggota.PerformClick()
+            Call autonumber()
+            Call bersih()
         End If
     End Sub
 End Class

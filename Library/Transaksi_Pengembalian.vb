@@ -29,8 +29,8 @@ Public Class Transaksi_Pengembalian
         If Not rd.HasRows Then
             UrutanKode = Format(Now, "yyMMdd") + "01"
         Else
-            Hitung = Microsoft.VisualBasic.Mid(rd.GetString(0), 8) + 1
-            UrutanKode = Format(Now, "MMyydd") + Microsoft.VisualBasic.Right("00" & Hitung, 2)
+            Hitung = Microsoft.VisualBasic.Mid(rd.GetString(0), 10) + 1
+            UrutanKode = Format(Now, "yyMMdd") + Microsoft.VisualBasic.Right("00" & Hitung, 2)
         End If
         txtidkembali.Text = "KB" + UrutanKode
     End Sub
@@ -159,6 +159,7 @@ Public Class Transaksi_Pengembalian
             Call bersih_transaksi()
             Call hitung_total_denda()
         End If
+        txtkmbsekarang.Text = dgvInputkembali.RowCount - 1
     End Sub
 
     Private Sub txtdenda_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtdenda.KeyPress
@@ -184,6 +185,7 @@ Public Class Transaksi_Pengembalian
                 Call bersih_transaksi()
                 Call hitung_total_denda()
             End If
+            txtkmbsekarang.Text = dgvInputkembali.RowCount - 1
         End If
     End Sub
 
@@ -197,6 +199,24 @@ Public Class Transaksi_Pengembalian
                                                                 "','" & txttotaldenda.Text &
                                                                 "') ", conn)
             cmd.ExecuteNonQuery()
+
+
+            'sv ke tbl total kembali
+            cmd = New OleDbCommand("select * from tbl_total_kembali where tanggal_kembali = #" & txttanggal.Text & "#", conn)
+            rd = cmd.ExecuteReader
+            rd.Read()
+            If rd.HasRows Then
+                Dim tambahtotal As String = "update tbl_total_kembali set total_kembali = '" & rd.Item("total_kembali") + Val(txtkmbsekarang.Text) & "' where tanggal_kembali = #" & txttanggal.Text & "#"
+                cmd = New OleDbCommand(tambahtotal, conn)
+                cmd.ExecuteNonQuery()
+            Else
+                cmd = New OleDbCommand("insert into tbl_total_kembali values(#" & txttanggal.Text &
+                                                                          "#,'" & txtkmbsekarang.Text & "')", conn)
+                cmd.ExecuteNonQuery()
+            End If
+
+
+
 
             For baris As Integer = 0 To dgvInputkembali.RowCount - 2
                 'save ke tabel kembali detail
