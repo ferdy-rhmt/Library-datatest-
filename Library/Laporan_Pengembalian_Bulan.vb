@@ -1,4 +1,7 @@
-﻿Public Class Laporan_Pengembalian_Bulan
+﻿Imports CrystalDecisions.CrystalReports.Engine
+Imports CrystalDecisions.Shared
+
+Public Class Laporan_Pengembalian_Bulan
     Private Sub laporan_peminjaman_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CrystalReportViewer1.Visible = False
     End Sub

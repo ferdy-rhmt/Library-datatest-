@@ -19,7 +19,27 @@ Public Class Laporan_Hari_kembali
         Try
             Dim laporan As New lap_kembali
             Dim cryrpt As New ReportDocument
+            Dim crtablelogoninfos As New TableLogOnInfos
+            Dim crtablelogoninfo As New TableLogOnInfo
+            Dim crconnectioninfo As New ConnectionInfo
+
+            Dim crtables As Tables
+            Dim crtable As Table
+
             cryrpt = laporan
+
+            With crconnectioninfo
+                .ServerName = Application.StartupPath & "\Database\db.mdb"
+                .DatabaseName = Application.StartupPath & "\Database\db.mdb"
+                .UserID = ""
+                .Password = ""
+            End With
+            crtables = cryrpt.Database.Tables
+            For Each crtable In crtables
+                crtablelogoninfo = crtable.LogOnInfo
+                crtablelogoninfo.ConnectionInfo = crconnectioninfo
+                crtable.ApplyLogOnInfo(crtablelogoninfo)
+            Next
 
             Laporan_Pengembalian_Hari.CrystalReportViewer1.SelectionFormula = "({tbl_kembali.tanggal_kembali})=#" & date1.Text & "#"
             forminpanel(Laporan_Pengembalian_Hari)
