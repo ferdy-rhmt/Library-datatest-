@@ -23,6 +23,7 @@ Public Class Laporan_Bulan_pinjam
             laporan_peminjaman_bulan.CrystalReportViewer1.Refresh()
             laporan_peminjaman_bulan.CrystalReportViewer1.RefreshReport()
             laporan_peminjaman_bulan.CrystalReportViewer1.Zoom(75)
+            laporan_peminjaman_bulan.CrystalReportViewer1.Visible = True
         Catch ex As Exception
 
         End Try

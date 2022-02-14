@@ -1,13 +1,13 @@
 ﻿Public Class laporan_peminjaman_bulan
     Private Sub laporan_peminjaman_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        CrystalReportViewer1.Visible = False
     End Sub
 
 
     Private Sub btnPinjamBuku_Click(sender As Object, e As EventArgs) Handles btnPinjamBuku.Click
         If cbjenis.SelectedIndex = 0 Then
-            Laporan_Hari_pinjam.ShowDialog()
             forminpanel(New Laporan_Peminjaman_Hari)
+            Laporan_Hari_pinjam.ShowDialog()
         ElseIf cbjenis.SelectedIndex = 1 Then
             Laporan_Bulan_pinjam.ShowDialog()
         ElseIf cbjenis.SelectedIndex = 2 Then

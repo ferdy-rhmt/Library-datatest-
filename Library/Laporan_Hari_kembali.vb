@@ -27,6 +27,7 @@ Public Class Laporan_Hari_kembali
             Laporan_Pengembalian_Hari.CrystalReportViewer1.Refresh()
             Laporan_Pengembalian_Hari.CrystalReportViewer1.RefreshReport()
             Laporan_Pengembalian_Hari.CrystalReportViewer1.Zoom(75)
+            Laporan_Pengembalian_Hari.CrystalReportViewer1.Visible = True
         Catch ex As Exception
 
         End Try
