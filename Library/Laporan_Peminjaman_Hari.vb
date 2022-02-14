@@ -8,8 +8,8 @@
         If cbjenis.SelectedIndex = 0 Then
             Laporan_Hari_pinjam.ShowDialog()
         ElseIf cbjenis.SelectedIndex = 1 Then
-            Laporan_Bulan_pinjam.ShowDialog()
             forminpanel(New Laporan_Pengembalian_Bulan)
+            Laporan_Bulan_pinjam.ShowDialog()
         Else
             MessageBox.Show("Data Tidak Ada!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If

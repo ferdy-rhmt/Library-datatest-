@@ -6,8 +6,8 @@
 
     Private Sub btnPinjamBuku_Click(sender As Object, e As EventArgs) Handles btnPinjamBuku.Click
         If cbjenis.SelectedIndex = 0 Then
-            Laporan_Hari_kembali.ShowDialog()
             forminpanel(New Laporan_Pengembalian_Hari)
+            Laporan_Hari_kembali.ShowDialog()
         ElseIf cbjenis.SelectedIndex = 1 Then
             Laporan_Bulan_kembali.ShowDialog()
         ElseIf cbjenis.SelectedIndex = 2 Then
