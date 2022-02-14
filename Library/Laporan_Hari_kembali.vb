@@ -17,16 +17,16 @@ Public Class Laporan_Hari_kembali
     Private Sub btnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
         Me.Close()
         Try
-            Dim cryrpt As New ReportDocument
             Dim laporan As New lap_kembali
+            Dim cryrpt As New ReportDocument
             cryrpt = laporan
 
-            laporan_pengembalian.CrystalReportViewer1.SelectionFormula = "({tbl_kembali.tanggal_kembali})=#" & date1.Text & "#"
-            forminpanel(laporan_pengembalian)
-            laporan_pengembalian.CrystalReportViewer1.ReportSource = cryrpt
-            laporan_pengembalian.CrystalReportViewer1.Refresh()
-            laporan_pengembalian.CrystalReportViewer1.RefreshReport()
-            laporan_pengembalian.CrystalReportViewer1.Zoom(75)
+            Laporan_Pengembalian_Hari.CrystalReportViewer1.SelectionFormula = "({tbl_kembali.tanggal_kembali})=#" & date1.Text & "#"
+            forminpanel(Laporan_Pengembalian_Hari)
+            Laporan_Pengembalian_Hari.CrystalReportViewer1.ReportSource = cryrpt
+            Laporan_Pengembalian_Hari.CrystalReportViewer1.Refresh()
+            Laporan_Pengembalian_Hari.CrystalReportViewer1.RefreshReport()
+            Laporan_Pengembalian_Hari.CrystalReportViewer1.Zoom(75)
         Catch ex As Exception
 
         End Try

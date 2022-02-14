@@ -17,16 +17,16 @@ Public Class Laporan_Hari_pinjam
     Private Sub btnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
         Me.Close()
         Try
-            Dim cryrpt As New ReportDocument
             Dim laporan As New lap_pinjam
+            Dim cryrpt As New ReportDocument
             cryrpt = laporan
 
-            laporan_peminjaman.CrystalReportViewer1.SelectionFormula = "({tbl_pinjam.tanggal_pinjam})=#" & date1.Text & "#"
-            forminpanel(laporan_peminjaman)
-            laporan_peminjaman.CrystalReportViewer1.ReportSource = cryrpt
-            laporan_peminjaman.CrystalReportViewer1.Refresh()
-            laporan_peminjaman.CrystalReportViewer1.RefreshReport()
-            laporan_peminjaman.CrystalReportViewer1.Zoom(75)
+            Laporan_Peminjaman_Hari.CrystalReportViewer1.SelectionFormula = "({tbl_pinjam.tanggal_pinjam})=#" & date1.Text & "#"
+            forminpanel(Laporan_Peminjaman_Hari)
+            Laporan_Peminjaman_Hari.CrystalReportViewer1.ReportSource = cryrpt
+            Laporan_Peminjaman_Hari.CrystalReportViewer1.Refresh()
+            Laporan_Peminjaman_Hari.CrystalReportViewer1.RefreshReport()
+            Laporan_Peminjaman_Hari.CrystalReportViewer1.Zoom(75)
         Catch ex As Exception
 
         End Try

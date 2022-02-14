@@ -9,7 +9,7 @@ Module Term
     Public mydb As String
     Public Sub Koneksi()
         Try
-            mydb = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Database\datatest.mdb;User ID=Admin"
+            mydb = "Provider=Microsoft.jet.OLEDB.4.0;Data Source=Database\db.mdb"
             conn = New OleDbConnection(mydb)
             If conn.State = ConnectionState.Closed Then
                 conn.Open()

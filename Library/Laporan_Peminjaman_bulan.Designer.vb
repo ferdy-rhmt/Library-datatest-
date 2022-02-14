@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class laporan_peminjaman
+Partial Class laporan_peminjaman_bulan
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class laporan_peminjaman
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(laporan_peminjaman))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(laporan_peminjaman_bulan))
         Me.GunaGradientPanel1 = New Guna.UI.WinForms.GunaGradientPanel()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
@@ -33,9 +33,9 @@ Partial Class laporan_peminjaman
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
         Me.Guna2TileButton2 = New Guna.UI2.WinForms.Guna2TileButton()
-        Me.lap_pinjam1 = New Library.lap_pinjam()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.lap_pinjam_bulan1 = New Library.lap_pinjam_bulan()
         Me.GunaGradientPanel1.SuspendLayout()
         Me.Guna2Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -107,7 +107,7 @@ Partial Class laporan_peminjaman
         Me.cbjenis.Name = "cbjenis"
         Me.cbjenis.ShadowDecoration.Parent = Me.cbjenis
         Me.cbjenis.Size = New System.Drawing.Size(276, 36)
-        Me.cbjenis.StartIndex = 0
+        Me.cbjenis.StartIndex = 1
         Me.cbjenis.TabIndex = 21
         Me.cbjenis.TextOffset = New System.Drawing.Point(5, 0)
         '
@@ -169,12 +169,13 @@ Partial Class laporan_peminjaman
         '
         'CrystalReportViewer1
         '
-        Me.CrystalReportViewer1.ActiveViewIndex = -1
+        Me.CrystalReportViewer1.ActiveViewIndex = 0
         Me.CrystalReportViewer1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(31, 126)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
+        Me.CrystalReportViewer1.ReportSource = Me.lap_pinjam_bulan1
         Me.CrystalReportViewer1.ShowCloseButton = False
         Me.CrystalReportViewer1.ShowCopyButton = False
         Me.CrystalReportViewer1.ShowExportButton = False
@@ -236,7 +237,7 @@ Partial Class laporan_peminjaman
         '
         Me.Guna2Elipse2.TargetControl = Me.CrystalReportViewer1
         '
-        'laporan_peminjaman
+        'laporan_peminjaman_bulan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -244,7 +245,7 @@ Partial Class laporan_peminjaman
         Me.ClientSize = New System.Drawing.Size(860, 580)
         Me.Controls.Add(Me.GunaGradientPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "laporan_peminjaman"
+        Me.Name = "laporan_peminjaman_bulan"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -265,5 +266,5 @@ Partial Class laporan_peminjaman
     Friend WithEvents btnPinjamBuku As Guna.UI2.WinForms.Guna2TileButton
     Friend WithEvents GunaLabel1 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents cbjenis As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents lap_pinjam1 As lap_pinjam
+    Friend WithEvents lap_pinjam_bulan1 As lap_pinjam_bulan
 End Class

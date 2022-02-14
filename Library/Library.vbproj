@@ -15,7 +15,7 @@
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -23,7 +23,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>Library.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-    <Prefer32Bit>true</Prefer32Bit>
+    <Prefer32Bit>false</Prefer32Bit>
     <Optimize>false</Optimize>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -145,10 +145,22 @@
     <Compile Include="Laporan_Hari_kembali.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Laporan_Pengembalian.Designer.vb">
-      <DependentUpon>Laporan_Pengembalian.vb</DependentUpon>
+    <Compile Include="Laporan_Peminjaman_bulan.Designer.vb">
+      <DependentUpon>Laporan_Peminjaman_bulan.vb</DependentUpon>
     </Compile>
-    <Compile Include="Laporan_Pengembalian.vb">
+    <Compile Include="Laporan_Peminjaman_bulan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan_Pengembalian_Bulan.Designer.vb">
+      <DependentUpon>Laporan_Pengembalian_Bulan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan_Pengembalian_Bulan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan_Pengembalian_Hari.Designer.vb">
+      <DependentUpon>Laporan_Pengembalian_Hari.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan_Pengembalian_Hari.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Laporan_Bulan_pinjam.Designer.vb">
@@ -205,10 +217,10 @@
     <Compile Include="Lainnya.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Laporan_Peminjaman.Designer.vb">
-      <DependentUpon>Laporan_Peminjaman.vb</DependentUpon>
+    <Compile Include="Laporan_Peminjaman_Hari.Designer.vb">
+      <DependentUpon>Laporan_Peminjaman_Hari.vb</DependentUpon>
     </Compile>
-    <Compile Include="Laporan_Peminjaman.vb">
+    <Compile Include="Laporan_Peminjaman_Hari.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Laporan.Designer.vb">
@@ -320,8 +332,14 @@
     <EmbeddedResource Include="Laporan_Hari_kembali.resx">
       <DependentUpon>Laporan_Hari_kembali.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Laporan_Pengembalian.resx">
-      <DependentUpon>Laporan_Pengembalian.vb</DependentUpon>
+    <EmbeddedResource Include="Laporan_Peminjaman_bulan.resx">
+      <DependentUpon>Laporan_Peminjaman_bulan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan_Pengembalian_Bulan.resx">
+      <DependentUpon>Laporan_Pengembalian_Bulan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan_Pengembalian_Hari.resx">
+      <DependentUpon>Laporan_Pengembalian_Hari.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Laporan_Bulan_pinjam.resx">
       <DependentUpon>Laporan_Bulan_pinjam.vb</DependentUpon>
@@ -350,8 +368,8 @@
     <EmbeddedResource Include="Lainnya.resx">
       <DependentUpon>Lainnya.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Laporan_Peminjaman.resx">
-      <DependentUpon>Laporan_Peminjaman.vb</DependentUpon>
+    <EmbeddedResource Include="Laporan_Peminjaman_Hari.resx">
+      <DependentUpon>Laporan_Peminjaman_Hari.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Laporan.resx">
       <DependentUpon>Laporan.vb</DependentUpon>

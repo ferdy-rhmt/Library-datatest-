@@ -1,4 +1,4 @@
-﻿Public Class laporan_pengembalian
+﻿Public Class Laporan_Pengembalian_Hari
     Private Sub laporan_peminjaman_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -9,8 +9,7 @@
             Laporan_Hari_kembali.ShowDialog()
         ElseIf cbjenis.SelectedIndex = 1 Then
             Laporan_Bulan_kembali.ShowDialog()
-        ElseIf cbjenis.SelectedIndex = 2 Then
-
+            forminpanel(New Laporan_Pengembalian_Bulan)
         Else
             MessageBox.Show("Data Tidak Ada!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If

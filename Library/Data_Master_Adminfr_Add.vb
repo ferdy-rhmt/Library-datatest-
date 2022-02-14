@@ -52,17 +52,22 @@ Public Class Data_Master_Adminfr_Add
         If txtpassw.Text <> txtretypepassw.Text Then
             MessageBox.Show("Password tidak sama!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
-            Call Koneksi()
-            cmd = New OleDbCommand("insert into tbl_admin values ('" & txtidadmin.Text &
-                                                      "','" & txtNameAdmin.Text &
-                                                      "','" & txtretypepassw.Text &
-                                                      "','" & cblevel.Text & "')", conn)
-            cmd.ExecuteNonQuery()
-            MessageBox.Show("Data berhasil disimpan!", "Berhasil!", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Data_Master_Adminfr.dgvAddAdmin.Refresh()
-            Data_Master.btnDataAdmin.PerformClick()
-            Call nomoroto()
-            Call bersih()
+            Try
+                Call Koneksi()
+                cmd = New OleDbCommand("insert into tbl_admin values ('" & txtidadmin.Text &
+                                                          "','" & txtNameAdmin.Text &
+                                                          "','" & txtretypepassw.Text &
+                                                          "','" & cblevel.Text & "')", conn)
+                cmd.ExecuteNonQuery()
+                MessageBox.Show("Data berhasil disimpan!", "Berhasil!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Data_Master_Adminfr.dgvAddAdmin.Refresh()
+                Data_Master.btnDataAdmin.PerformClick()
+                Call nomoroto()
+                Call bersih()
+            Catch ex As Exception
+
+            End Try
+
         End If
     End Sub
 End Class
